@@ -16,7 +16,7 @@ class Rate extends Model
         'amount'
     ];
 
-//    Bootable
+    #region Bootable
     protected static function boot()
     {
         parent::boot();
@@ -24,4 +24,12 @@ class Rate extends Model
             $rate->user_id = Auth::id();
         });
     }
+    #endregion
+    #region Relations
+    public function products()
+    {
+        return $this->belongsTo(Product::class);
+    }
+    #endregion
+
 }
