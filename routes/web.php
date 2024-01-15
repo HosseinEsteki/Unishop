@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    \Illuminate\Support\Facades\Auth::loginUsingId(8);
+    $product = \App\Models\Product::first();
+    $product->rates()->create(['amount' => 5]);
+    dd($product->rate);
+//    return view('welcome');
 });
 
 Route::prefix('account')->name('account.')->group(function () {
