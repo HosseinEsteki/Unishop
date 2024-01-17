@@ -38,4 +38,9 @@ class Product extends Model
     {
         return $this->hasMany(Rate::class);
     }
+
+    public function views(): HasMany
+    {
+        return $this->hasMany(View::class);
+    }
 }
