@@ -16,23 +16,8 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-
-        $timestamp = ['created_at' => now(), 'updated_at' => now()];
-        $p1 = Product::create([
-                'title' => "محصول 1",
-                'short_description' => "این اولین محصول ماست",
-                'description' => "توضیحات اولین محصول",
-                'address' => "p1",
-            ] + $timestamp);
-        Rate::insert(['user_id' => 1, 'amount' => 3, 'product_id' => $p1->id] + $timestamp);
-        Rate::insert(['user_id' => 2, 'amount' => 2, 'product_id' => $p1->id] + $timestamp);
-        Rate::insert(['user_id' => 3, 'amount' => 2, 'product_id' => $p1->id] + $timestamp);
-        Rate::insert(['user_id' => 4, 'amount' => 4, 'product_id' => $p1->id] + $timestamp);
-        Rate::insert(['user_id' => 5, 'amount' => 1, 'product_id' => $p1->id] + $timestamp);
-        View::insert(['ip_address' => fake()->ipv4(), 'user_id' => 1, 'product_id' => $p1->id] + $timestamp);
-        View::insert(['ip_address' => fake()->ipv4(), 'user_id' => 3, 'product_id' => $p1->id] + $timestamp);
-        View::insert(['ip_address' => fake()->ipv4(), 'user_id' => 5, 'product_id' => $p1->id] + $timestamp);
-        View::insert(['ip_address' => fake()->ipv4(), 'user_id' => 4, 'product_id' => $p1->id] + $timestamp);
-
+        Product::factory(5)->create();
+        View::factory(20)->create();
+        Rate::factory(20)->create();
     }
 }

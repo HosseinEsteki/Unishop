@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class Rate extends Model
 {
@@ -19,10 +20,10 @@ class Rate extends Model
     #region Bootable
     protected static function boot()
     {
-        parent::boot();
         parent::creating(function ($rate) {
             $rate->user_id = Auth::id();
         });
+        parent::boot();
     }
     #endregion
     #region Relations
