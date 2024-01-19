@@ -19,14 +19,16 @@ class ViewFactory extends Factory
     public function definition(): array
     {
         $productIds = Product::all('id');
+        $updated_at = $this->faker->dateTime;
+        $created_at = $this->faker->dateTime($updated_at);
         $userIds = User::all('id');
 //        var_dump($productIds);
         return [
             'ip_address' => $this->faker->ipv4(),
             'user_id' => $userIds->random(),
             'product_id' => $productIds->random(),
-            'created_at' => $this->faker->dateTime(),
-            'updated_at' => $this->faker->dateTime()
+            'created_at' => $created_at,
+            'updated_at' => $updated_at
         ];
     }
 }
