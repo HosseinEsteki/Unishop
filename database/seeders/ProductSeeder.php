@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Photo;
 use App\Models\Product;
+use App\Models\ProductDetail;
 use App\Models\Rate;
 use App\Models\Tag;
 use App\Models\View;
@@ -20,7 +21,8 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::factory(5)->create();
+        Product::factory(5)->has(ProductDetail::factory())->create();
+
         View::factory(20)->create();
         Rate::factory(20)->create();
 

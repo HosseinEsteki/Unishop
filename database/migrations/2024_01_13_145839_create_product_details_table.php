@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('product_details', function (Blueprint $table) {
-            $table->id();
+            $table->foreignIdFor(\App\Models\Product::class)->constrained()->cascadeOnDelete();
             $table->bigInteger('price');
             $table->integer('amount');
             $table->timestamps();

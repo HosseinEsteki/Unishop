@@ -57,5 +57,10 @@ class Product extends Model
     {
         return $this->hasMany(Photo::class);
     }
+
+    public function productDetail()
+    {
+        return $this->hasOne(ProductDetail::class);
+    }
     #endregion
 }
