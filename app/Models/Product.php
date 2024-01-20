@@ -18,9 +18,8 @@ class Product extends Model
         'description',
         'address'
     ];
-//    Bootable
 
-//    Attributes
+    #region Attributes
     protected function rate(): Attribute
     {
         return Attribute::make(
@@ -31,9 +30,9 @@ class Product extends Model
             },
         );
     }
+    #endregion
 
-
-    //Relations
+    #region Relations
     public function rates(): HasMany
     {
         return $this->hasMany(Rate::class);
@@ -43,4 +42,20 @@ class Product extends Model
     {
         return $this->hasMany(View::class);
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+    #endregion
 }
