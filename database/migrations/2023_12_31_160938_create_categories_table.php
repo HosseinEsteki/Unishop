@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('address');
+            $table->foreignId('photo_id')->constrained()->noActionOnDelete();
             $table->timestamps();
         });
     }
