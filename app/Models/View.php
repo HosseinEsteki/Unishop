@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ class View extends Model
     ];
 
     #region Bootable
-    protected static function boot()
+    protected static function boot(): void
     {
         parent::creating(function (View $view) {
             $userId = null;
@@ -44,7 +45,7 @@ class View extends Model
     }
     #endregion
     #region Relations
-    public function products()
+    public function products(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
