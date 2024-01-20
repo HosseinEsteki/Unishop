@@ -16,12 +16,17 @@ class Rate extends Model
         'user_id',
         'amount'
     ];
+    protected $primaryKey = ['user_id', 'product_id'];
+    public $incrementing = false;
 
     #region Bootable
     protected static function boot()
     {
         parent::creating(function ($rate) {
-            $rate->user_id = Auth::id();
+            if (Rate::where('user_id', $rate->user_id)->where('product_id', $rate->product_id)->count() > 0)
+                return false;
+//            $rate->user_id = Auth::id();
+            return true;
         });
         parent::boot();
     }

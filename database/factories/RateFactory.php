@@ -3,8 +3,10 @@
 namespace Database\Factories;
 
 use App\Models\Product;
+use App\Models\Rate;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rate>
@@ -18,6 +20,7 @@ class RateFactory extends Factory
      */
     public function definition(): array
     {
+        Rate::preventLazyLoading();
         $productIds = Product::all('id');
         $userIds = User::all('id');
         $updated_at = $this->faker->dateTime;
