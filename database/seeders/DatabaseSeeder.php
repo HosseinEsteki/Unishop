@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use App\Models\WishList;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
@@ -16,14 +18,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->TruncateDatabase();
-        \App\Models\User::factory(10)->create();
         $this->call([
             ProductSeeder::class
         ]);
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 
     private function TruncateDatabase(): void

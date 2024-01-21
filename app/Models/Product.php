@@ -33,23 +33,19 @@ class Product extends Model
         );
     }
     #endregion
-
     #region Relations
     public function rates(): HasMany
     {
         return $this->hasMany(Rate::class);
     }
-
     public function views(): HasMany
     {
         return $this->hasMany(View::class);
     }
-
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);
     }
-
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
@@ -63,6 +59,11 @@ class Product extends Model
     public function productDetail(): HasOne
     {
         return $this->hasOne(ProductDetail::class);
+    }
+
+    public function wishList(): HasMany
+    {
+        return $this->hasMany(WishList::class);
     }
     #endregion
 }
