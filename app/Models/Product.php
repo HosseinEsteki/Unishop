@@ -61,7 +61,7 @@ class Product extends Model
         return $this->hasOne(ProductDetail::class);
     }
 
-    public function wishList(): HasMany
+    public function wishLists(): HasMany
     {
         return $this->hasMany(WishList::class);
     }

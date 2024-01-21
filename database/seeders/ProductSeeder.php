@@ -23,9 +23,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->has(WishList::factory(random_int(1, 3)))->create();
-
+        User::factory(10)->create();
         Product::factory(5)->has(ProductDetail::factory())->create();
+
+        WishList::factory(30)->create();
 
         View::factory(20)->create();
         Rate::factory(20)->create();

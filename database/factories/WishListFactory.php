@@ -3,10 +3,11 @@
 namespace Database\Factories;
 
 use App\Models\Product;
+use App\Models\WishList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\WishList>
+ * @extends Factory<WishList>
  */
 class WishListFactory extends Factory
 {
@@ -18,8 +19,10 @@ class WishListFactory extends Factory
     public function definition(): array
     {
         $products = Product::all('id')->pluck('id');
+        $users = Product::all('id')->pluck('id');
         return [
-            'product_id' => $products->random()
+            'product_id' => $products->random(),
+            'user_id' => $users->random()
         ];
     }
 }

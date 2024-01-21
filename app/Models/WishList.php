@@ -28,6 +28,7 @@ class WishList extends Model
 //            $wishList->user_id=Auth::id();
             return true;
         });
+        parent::boot();
     }
     #endregion
     #region Relations
