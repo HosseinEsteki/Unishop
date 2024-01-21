@@ -21,7 +21,7 @@ class WishList extends Model
     #region Boot
     protected static function boot(): void
     {
-        parent::creating(function (Wishlist $wishList) {
+        parent::creating(function (WishList $wishList) {
             if (WishList::where('user_id', $wishList->user_id)->where('product_id', $wishList->product_id)->count() > 0) {
                 return false;
             }
