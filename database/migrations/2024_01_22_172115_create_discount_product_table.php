@@ -10,11 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('discounts', function (Blueprint $table) {
-            $table->id();
-            $table->integer('percent');
-            $table->date('expiration_at');
-            $table->timestamps();
+        Schema::create('discount_product', function (Blueprint $table) {
+            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('discount_id')->constrained()->cascadeOnDelete();
+            $table->primary(['discount_id', 'product_id']);
         });
     }
 
@@ -23,6 +22,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('discounts');
+        Schema::dropIfExists('discount_product');
     }
 };
