@@ -17,8 +17,10 @@ class ProductFactory extends Factory
     public function definition(): array
     {
 //        dd(now()->toDateTimeLocalString());
+        $productName = $this->faker->words(3, true);
         return [
-            'title' => $this->faker->words(3, true),
+            'title' => $productName,
+            'name' => $productName,
             'short_description' => $this->faker->words(20, true),
             'description' => $this->faker->words(100, true),
             'address' => $this->faker->slug,

@@ -16,6 +16,7 @@ class Product extends Model
 
     protected $fillable = [
         'title',
+        'name',
         'short_description',
         'description',
         'address'
@@ -64,6 +65,11 @@ class Product extends Model
     public function wishLists(): HasMany
     {
         return $this->hasMany(WishList::class);
+    }
+
+    public function discounts(): BelongsToMany
+    {
+        return $this->belongsToMany(Discount::class);
     }
     #endregion
 }
