@@ -50,5 +50,10 @@ class User extends Authenticatable
         return $this->hasMany(WishList::class);
     }
 
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
+
     #endregion
 }
