@@ -18,7 +18,7 @@ class OrderFactory extends Factory
      */
     public function definition(): array
     {
-        $status = OrderStatus::cases()[random_int(1, 3)];
+        $status = OrderStatus::cases()[random_int(0, 3)];
         return [
             'status' => $status->name
         ];
