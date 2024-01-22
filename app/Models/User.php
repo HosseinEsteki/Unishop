@@ -55,5 +55,10 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
+    public function comments(): HasMany
+    {
+        return $this->hasMany(User::class);
+    }
+
     #endregion
 }

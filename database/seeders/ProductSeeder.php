@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Comment;
+use App\Models\CommentPoint;
 use App\Models\Discount;
 use App\Models\Order;
 use App\Models\OrderProduct;
@@ -15,10 +17,6 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\View;
 use App\Models\WishList;
-use Database\Factories\DiscountFactory;
-use Database\Factories\TagFactory;
-use Faker\Factory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -28,12 +26,17 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::factory(10)->has(ProductDetail::factory())->create();
+        $products = Product::factory(10)->has(ProductDetail::factory())->create();
 
         User::factory(10)->
         has(Order::factory()->
         has(OrderProduct::factory(5)))->
         create();
+
+        foreach ($products as $product) {
+            Comment::factory(random_int(1, 5))->has(CommentPoint::factory(random_int(1, 5)))->create(['product_id' => $product->id]);
+        }
+
         Discount::factory(5)->hasAttached([1, 2, 3], [], 'products')->create();
 
         View::factory(20)->create();

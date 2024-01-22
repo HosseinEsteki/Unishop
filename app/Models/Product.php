@@ -71,5 +71,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Discount::class);
     }
+
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
     #endregion
 }
