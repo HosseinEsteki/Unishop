@@ -33,7 +33,7 @@ class Comment extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function commentPoints(): HasMany
+    public function points(): HasMany
     {
         return $this->hasMany(CommentPoint::class);
     }

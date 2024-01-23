@@ -26,7 +26,9 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        $products = Product::factory(10)->has(ProductDetail::factory())->create();
+        $products = Product::factory(10)->
+        has(ProductDetail::factory())->
+        create();
 
         User::factory(10)->
         has(Order::factory()->
@@ -34,10 +36,14 @@ class ProductSeeder extends Seeder
         create();
 
         foreach ($products as $product) {
-            Comment::factory(random_int(1, 5))->has(CommentPoint::factory(random_int(1, 5)))->create(['product_id' => $product->id]);
+            Comment::factory(random_int(1, 5))->
+            has(CommentPoint::factory(random_int(1, 5)), 'points')->
+            create(['product_id' => $product->id]);
         }
 
-        Discount::factory(5)->hasAttached([1, 2, 3], [], 'products')->create();
+        Discount::factory(5)->
+        hasAttached([1, 2, 3], [], 'products')->
+        create();
 
         View::factory(20)->create();
         Rate::factory(20)->create();
