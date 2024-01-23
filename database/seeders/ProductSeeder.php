@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Comment;
 use App\Models\CommentPoint;
 use App\Models\Discount;
+use App\Models\Faq;
 use App\Models\Order;
 use App\Models\OrderProduct;
 use App\Models\Photo;
@@ -55,5 +56,9 @@ class ProductSeeder extends Seeder
         WishList::factory(30)->create();
 
         Cart::factory(10)->create();
+
+        Faq::factory(20)->create();
+
+
     }
 }
