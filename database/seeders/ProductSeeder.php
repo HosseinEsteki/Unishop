@@ -15,6 +15,8 @@ use App\Models\Product;
 use App\Models\ProductDetail;
 use App\Models\Rate;
 use App\Models\Tag;
+use App\Models\Ticket;
+use App\Models\TicketMessage;
 use App\Models\User;
 use App\Models\View;
 use App\Models\WishList;
@@ -33,8 +35,9 @@ class ProductSeeder extends Seeder
 
         User::factory(10)->
         has(Order::factory()->
-        has(OrderProduct::factory(5)))->
+        has(OrderProduct::factory(5), 'products'))->
         create();
+
 
         foreach ($products as $product) {
             Comment::factory(random_int(1, 5))->
@@ -59,6 +62,6 @@ class ProductSeeder extends Seeder
 
         Faq::factory(20)->create();
 
-
+        Ticket::factory(1)->has(TicketMessage::factory(5)->set('user_id', 2), 'messages')->create(['user_id' => 2, 'order_id' => Order::all('id')->random()]);
     }
 }
