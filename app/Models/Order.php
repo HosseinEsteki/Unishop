@@ -12,9 +12,10 @@ class Order extends Model
     use HasFactory;
 
     #region Relations
-    public function orderProducts(): HasMany
+    public function products(): HasMany
     {
         return $this->hasMany(OrderProduct::class);
     }
+
     #endregion
 }
