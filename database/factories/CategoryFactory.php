@@ -30,12 +30,4 @@ class CategoryFactory extends Factory
             'updated_at' => $updated_at
         ];
     }
-
-    public function configure()
-    {
-        return $this->afterCreating(function (Category $category) {
-            $tagIds = Tag::all('id')->random(random_int(1, 5))->pluck('id');
-            $category->tags()->sync($tagIds);
-        });
-    }
 }

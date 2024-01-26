@@ -30,8 +30,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        $tags = Tag::factory(30)->create();
         $products = Product::factory(10)->
         has(ProductDetail::factory())->
+        hasAttached($tags->random(5))->
         create();
 
         User::factory(10)->
@@ -54,9 +56,10 @@ class ProductSeeder extends Seeder
         View::factory(20)->create();
         Rate::factory(20)->create();
 
-        Tag::factory(20)->create();
-        Photo::factory(30)->create();
-        Category::factory(15)->create();
+        Category::factory(15)
+            ->has(Photo::factory(1))
+            ->hasAttached($tags->random(3))
+            ->create();
 
         WishList::factory(30)->create();
 
