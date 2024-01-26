@@ -20,7 +20,12 @@ class OrderFactory extends Factory
     {
         $status = OrderStatus::cases()[random_int(0, 3)];
         return [
-            'status' => $status->name
+            'name' => $this->faker->name,
+            'phone_number' => $this->faker->phoneNumber,
+            'postcode' => $this->faker->postcode,
+            'address' => $this->faker->address,
+            'status' => $status->name,
+
         ];
     }
 }
