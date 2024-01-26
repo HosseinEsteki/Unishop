@@ -34,6 +34,7 @@ class ProductSeeder extends Seeder
         $products = Product::factory(10)->
         has(ProductDetail::factory())->
         hasAttached($tags->random(5))->
+        hasAttached(Photo::factory(2))->
         create();
 
         User::factory(10)->

@@ -52,9 +52,9 @@ class Product extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-    public function photos(): HasMany
+    public function photos(): BelongsToMany
     {
-        return $this->hasMany(Photo::class);
+        return $this->belongsToMany(Photo::class);
     }
 
     public function productDetail(): HasOne
