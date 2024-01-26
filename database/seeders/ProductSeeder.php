@@ -18,6 +18,7 @@ use App\Models\Tag;
 use App\Models\Ticket;
 use App\Models\TicketMessage;
 use App\Models\User;
+use App\Models\UserAddress;
 use App\Models\View;
 use App\Models\WishList;
 use Illuminate\Database\Seeder;
@@ -34,6 +35,7 @@ class ProductSeeder extends Seeder
         create();
 
         User::factory(10)->
+        has(UserAddress::factory(), 'addresses')->
         has(Order::factory()->
         has(OrderProduct::factory(5), 'products'))->
         create();

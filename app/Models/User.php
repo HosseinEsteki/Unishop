@@ -65,9 +65,15 @@ class User extends Authenticatable
         return $this->hasMany(Ticket::class);
     }
 
-    public function ticketMessages(): HasMany
+    /*
+        public function ticketMessages(): HasMany
+        {
+            return $this->hasMany(TicketMessage::class);
+        }
+    */
+    public function addresses(): HasMany
     {
-        return $this->hasMany(TicketMessage::class);
+        return $this->hasMany(UserAddress::class);
     }
 
     #endregion
