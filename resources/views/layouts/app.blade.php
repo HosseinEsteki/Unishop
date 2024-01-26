@@ -24,6 +24,7 @@
     <link id="mainStyles" rel="stylesheet" media="screen" href="/unishop-theme/css/styles.css">
     <link id="mainStyles" rel="stylesheet" media="screen" href="/unishop-theme/css/rtl.css">
     <link rel="stylesheet" href="/unishop-theme/css/fancy-slider/style.css">
+    @yield('links')
     <!-- Modernizr-->
     <script src="/unishop-theme/js/modernizr.min.js"></script>
 </head>
@@ -52,5 +53,6 @@
 <script src="/unishop-theme/js/vendor.min.js"></script>
 <script src="/unishop-theme/js/scripts.min.js"></script>
 <script src="/unishop-theme/js/fancy-slider/index.js"></script>
+@yield('scripts')
 </body>
 </html>
