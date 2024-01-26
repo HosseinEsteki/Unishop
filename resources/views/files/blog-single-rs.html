@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>یونی شاپ | قالب فروشگاهی یونی شاپ
+    </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Unishop - Universal E-Commerce Template">
+    <meta name="keywords"
+          content="shop, e-commerce, modern, flat style, responsive, online store, business, mobile, blog, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="Rokaux">
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicon and Apple Icons-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+    <!-- Main Template Styles-->
+    <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.css">
+    <link id="mainStyles" rel="stylesheet" media="screen" href="css/rtl.css">
+    <link rel="stylesheet" href="css/fancy-slider/style.css">
+    <!-- Modernizr-->
+    <script src="js/modernizr.min.js"></script>
+</head>
+<!-- Body-->
+<body>
+
+<!-- Default Modal-->
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><i class="icon-unlock"></i> - ورود به تاپ کالا </h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" method="post">
+                <div class="modal-body text-right">
+                    <div class="row">
+                        <div class="col-md-12 text-center mb-3 hidden-sm-down">
+                            <img src="img/account/buffallo.png" width="100">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="input-user">نام کاربری یا پست الکترونیک</label>
+                                <input class="form-control" type="text" id="input-user"
+                                       placeholder="نام کاربری را وارد کنید ">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-pass">کلمه عبور</label>
+                                <input class="form-control" type="password" id="input-pass"
+                                       placeholder="کلمه عبور را وارد کنید">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding-top-1x">
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">مرا بخاطر بسپار</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#" style="text-decoration:none">فراموشی کلمه عبور</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-rounded btn-success btn-sm col-md-12" type="button">ورود به تاپ کالا</button>
+                </div>
+                <div class="modal-footer">
+                    <a href="#">
+                        <button class="btn btn-rounded btn-primary btn-sm " type="button">ثبت نام نکرده اید , همین حالا
+                            اقدام کنید
+                        </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Off-Canvas Category Menu-->
+<div class="offcanvas-container" id="shop-categories">
+    <a class="account-link" href="account-orders.html">
+        <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt="Daniel Adams"></div>
+        <div class="user-info">
+            <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children"><span><a href="#">کفش های مردانه</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">کفش ورزشی</a></li>
+                    <li><a href="#">کوهنوردی</a></li>
+                    <li><a href="#">کفشهای پوتین</a></li>
+                    <li><a href="#">کفش تابستانه</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">کفشهای زنانه</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">سندل زنانه</a></li>
+                    <li><a href="#">تخت و اسلیم</a></li>
+                    <li><a href="#">کوهنوردی</a></li>
+                    <li><a href="#">پاشنه بلند</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">لباس های مردانه</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">تیشرت و بلوز</a></li>
+                    <li><a href="#">پالتو</a></li>
+                    <li><a href="#">ژاکت</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">لباس زنانه</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">پیراهن</a></li>
+                    <li><a href="#">تیشرت و تاپ</a></li>
+                    <li><a href="#">لباس زیر</a></li>
+                    <li><a href="#">سوییشرت</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">کفش کودکان</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">پوتین</a></li>
+                    <li><a href="#">سندل</a></li>
+                    <li><a href="#">کفش اسپرت</a></li>
+                    <li><a href="#">کوهنوردی</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">کیغ و چرم</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">کیف دستی</a></li>
+                    <li><a href="#">کوله پشتی</a></li>
+                    <li><a href="#">کیف تحصیل</a></li>
+                    <li><a href="#">کیف رسمی و اداری</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">دستبند و آویز</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="#">دستبند فلزی</a></li>
+                    <li><a href="#">سر بند</a></li>
+                    <li><a href="#">ساعت لوکس</a></li>
+                    <li><a href="#">گردنبند</a></li>
+                    <li><a href="#">گوشواره</a></li>
+                    <li><a href="#">نمایش همه</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- Off-Canvas Mobile Menu-->
+<div class="offcanvas-container" id="mobile-menu">
+    <a class="account-link" href="account-orders.html">
+        <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt="Daniel Adams"></div>
+        <div class="user-info">
+            <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children active"><span><a href="index.html"><span>خانه</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li class="active"><a href="index.html">ویژگی های اسلایدر محصولات</a></li>
+                    <li><a href="home-featured-categories.html">ویژه دسته بندی ها</a></li>
+                    <li><a href="home-collection-showcase.html">نمایش دسته بندی محصولات</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="shop-grid-ls.html"><span>فروشگاه</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li>
+                        <a href="shop-categories.html">دسته بندی فروشگاه</a>
+                    </li>
+                    <li class="has-children"><span><a href="shop-grid-ls.html"><span>نمایش جدولی</span></a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="shop-grid-ls.html">جدولی سایدبار چپ</a></li>
+                            <li><a href="shop-grid-rs.html">جدولی سایدبار راست</a></li>
+                            <li><a href="shop-grid-ns.html">جدولی بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="shop-list-ls.html"><span>نمایش خطی</span></a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="shop-list-ls.html">خطی سایدبار چپ</a></li>
+                            <li><a href="shop-list-rs.html">خطی سایدبار راست</a></li>
+                            <li><a href="shop-list-ns.html">خطی بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop-single.html">صفحه محصولات</a></li>
+                    <li><a href="cart.html">سبد خرید</a></li>
+                    <li><a href="checkout.html">بررسی و پرداخت</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#">دسته بندی ها</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li class="has-children"><span><a href="#">کفشهای مردانه</a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">ورزشی</a></li>
+                            <li><a href="#">کوهنوردی</a></li>
+                            <li><a href="#">پوتین کفش</a></li>
+                            <li><a href="#">سندل</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="#">کفشهای زنانه</a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">سندل</a></li>
+                            <li><a href="#">کفش تخت</a></li>
+                            <li><a href="#">کوهنوردی</a></li>
+                            <li><a href="#">پاشنه بلند</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="#">پوشاک مردانه</a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">تیشرت مردانه</a></li>
+                            <li><a href="#">پالتو</a></li>
+                            <li><a href="#">ژاکت</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="#">پوشاک زنانه</a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">پراهن زنانه</a></li>
+                            <li><a href="#">تاپ و تیشرت</a></li>
+                            <li><a href="#">لباس زیر</a></li>
+                            <li><a href="#">سوییشرت</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="#">کیف و چرم</a><span class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">کیف دستس</a></li>
+                            <li><a href="#">کوله پشتی</a></li>
+                            <li><a href="#">کیف مدرسه</a></li>
+                            <li><a href="#">کیف اداری</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="#">آویز و تزیینی</a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="#">ساعت مچی</a></li>
+                            <li><a href="#">گردنبند</a></li>
+                            <li><a href="#">دستبند</a></li>
+                            <li><a href="#">انگشتر</a></li>
+                            <li><a href="#">گوشواره</a></li>
+                            <li><a href="#">نمایش همه</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="account-orders.html"><span>دسترسی ها</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="account-login.html">ورود / ثبت نام</a></li>
+                    <li><a href="account-password-recovery.html">فراموشی رمز</a></li>
+                    <li><a href="account-orders.html">لیست سفارشات</a></li>
+                    <li><a href="account-wishlist.html">علاقه مندی های من</a></li>
+                    <li><a href="account-profile.html">صفحه پروفایل من</a></li>
+                    <li><a href="account-address.html">مشخصات تماس و آدرسها</a></li>
+                    <li><a href="account-open-ticket.html">ارسال درخواست</a></li>
+                    <li><a href="account-tickets.html">درخواست های من</a></li>
+                    <li><a href="account-single-ticket.html">درخواست تکی</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="blog-rs.html"><span>وبلاگ</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li class="has-children"><span><a href="blog-rs.html"><span>طرح وبلاگ</span></a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="blog-rs.html">وبلاگ با سایدبار راست</a></li>
+                            <li><a href="blog-ls.html">وبلاگ با سایدبار چپ</a></li>
+                            <li><a href="blog-ns.html">وبلاگ بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><span><a href="blog-single-rs.html"><span>صفحه پست مطلب</span></a><span
+                        class="sub-menu-toggle"></span></span>
+                        <ul class="offcanvas-submenu">
+                            <li><a href="blog-single-rs.html">مطلب با سایدبار راست</a></li>
+                            <li><a href="blog-single-ls.html">مطلب با سایدبار چپ</a></li>
+                            <li><a href="blog-single-ns.html">مطلب بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="#"><span>صفحات</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="mobile-app.html">یونی شاپ اپلیکشن موبایل</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="contacts.html">ارتباط با ما</a></li>
+                    <li><a href="faq.html">راهنما / FAQ</a></li>
+                    <li><a href="order-tracking.html">لیست سفارشات</a></li>
+                    <li><a href="search-results.html">جستجوی نتایج</a></li>
+                    <li><a href="404.html">404</a></li>
+                    <li><a href="coming-soon.html">صفحه بزودی</a></li>
+                    <li><a class="text-danger" href="docs/dev-setup.html">مستندات</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><span><a href="components/accordion.html"><span>قابلیت ها</span></a><span
+                class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li><a href="components/accordion.html">آکاردئون</a></li>
+                    <li><a href="components/alerts.html">خطا و هشدار</a></li>
+                    <li><a href="components/buttons.html">دکمه ها</a></li>
+                    <li><a href="components/cards.html">کارد ویزیت</a></li>
+                    <li><a href="components/carousel.html">لغزنده ها</a></li>
+                    <li><a href="components/countdown.html">شمارنده ها</a></li>
+                    <li><a href="components/forms.html">فرم ها</a></li>
+                    <li><a href="components/gallery.html">گالری</a></li>
+                    <li><a href="components/google-maps.html">گوگل مپ</a></li>
+                    <li><a href="components/images.html">تصاویر و جعبه نمایش</a></li>
+                    <li><a href="components/list-group.html">نمایش خطی</a></li>
+                    <li><a href="components/market-social-buttons.html">مارکت و دکمه های اجتماعی</a></li>
+                    <li><a href="components/media.html">اشیا رسانه</a></li>
+                    <li><a href="components/modal.html">مودال باکس</a></li>
+                    <li><a href="components/pagination.html">صفحه بندی</a></li>
+                    <li><a href="components/pills.html">انتخابگر</a></li>
+                    <li><a href="components/progress-bars.html">نوار پیشرفت</a></li>
+                    <li><a href="components/shop-items.html">المان فروشگاه</a></li>
+                    <li><a href="components/steps.html">مرحله بندی</a></li>
+                    <li><a href="components/tables.html">جداول</a></li>
+                    <li><a href="components/tabs.html">تب شو</a></li>
+                    <li><a href="components/team.html">تیم کاری</a></li>
+                    <li><a href="components/toasts.html">رویدادهای لحظه ای</a></li>
+                    <li><a href="components/tooltips-popovers.html">حباب عنوان</a></li>
+                    <li><a href="components/typography.html">تایپو گرافی</a></li>
+                    <li><a href="components/video-player.html">ویدئو پلیر</a></li>
+                    <li><a href="components/widgets.html">ابزارک ها</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- Topbar-->
+
+<div class="topbar">
+    <div class="topbar-column">
+        <a href="about.html" class="hidden-md-down" href="tel:00331697720">
+            <i class="icon-map"></i>&nbsp; قوانین و مقررات فروش
+        </a>
+        <a href="about.html" class="hidden-md-down" href="tel:00331697720">
+            <i class="icon-heart"></i>&nbsp; محاسبه هزینه ارسال
+        </a>
+        <a href="contacts.html" class="hidden-md-down" href="mailto:support@unishop.com">
+            <i class="icon-mail"></i>&nbsp; درباره ما
+        </a>
+        <a href="contacts.html" class="hidden-md-down" href="tel:00331697720">
+            <i class="icon-bell"></i>&nbsp; تماس با ما
+        </a>
+        <a class="social-button sb-facebook shape-none sb-dark" href="#" target="_blank">
+            <i class="socicon-facebook"></i>
+        </a>
+        <a class="social-button sb-twitter shape-none sb-dark" href="#" target="_blank">
+            <i class="socicon-twitter"></i>
+        </a>
+        <a class="social-button sb-instagram shape-none sb-dark" href="#" target="_blank">
+            <i class="socicon-instagram"></i>
+        </a>
+        <a class="social-button sb-pinterest shape-none sb-dark" href="#" target="_blank">
+            <i class="socicon-pinterest"></i>
+        </a>
+    </div>
+    <div class="topbar-column"><a class="hidden-md-down" href="#"><i class="icon-download"></i>&nbsp; دریافت اپ
+        موبایل</a>
+        <div class="lang-currency-switcher-wrap">
+            <div class="lang-currency-switcher dropdown-toggle"><span class="language"><img alt="English"
+                                                                                            src="img/flags/FA.png"></span><span
+                class="currency">تومان</span></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><img src="img/flags/GB.png" alt="Deutsch">English</a>
+                <a class="dropdown-item" href="#"><img src="img/flags/FR.png" alt="Français">Français</a>
+                <a class="dropdown-item" href="#"><img src="img/flags/IT.png" alt="Italiano">Italiano</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar-->
+<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+
+<header class="navbar navbar-sticky">
+    <!-- Search-->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="عبارت مورد جستجو را تایپ کنید . . .">
+        <div class="search-tools"><span class="clear-search hidden-xs-down">پاک کردن</span><span class="close-search"><i
+            class="icon-cross"></i></span></div>
+    </form>
+    <div class="site-branding">
+        <div class="inner">
+            <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories"
+                                                           data-toggle="offcanvas"></a>
+            <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle " href="#mobile-menu"
+                                                       data-toggle="offcanvas"></a>
+            <!-- Site Logo--><a class="site-logo" href="index.html"><img src="img/logo/logo.png" alt="Unishop"></a>
+        </div>
+    </div>
+    <!-- Main Navigation-->
+    <nav class="site-menu">
+        <ul>
+            <li class="has-megamenu"><a href="index.html"><span>خانه</span></a>
+                <ul class="mega-menu">
+                    <li><a class="d-block img-thumbnail text-center navi-link" href="index.html"><img
+                        alt="Featured Products Slider" src="img/mega-menu-home/01.jpg">
+                        <h6 class="mt-3">با قابلیت اسلایدر محصولات</h6></a></li>
+                    <li><a class="d-block img-thumbnail text-center navi-link" href="home-featured-categories.html"><img
+                        alt="Featured Categories" src="img/mega-menu-home/02.jpg">
+                        <h6 class="mt-3">دسته بندی محصولات</h6></a></li>
+                    <li><a class="d-block img-thumbnail text-center navi-link" href="home-collection-showcase.html"><img
+                        alt="Products Collection Showcase" src="img/mega-menu-home/03.jpg">
+                        <h6 class="mt-3">محصولات طبقه بندی شده</h6></a></li>
+                    <li>
+                        <div class="img-thumbnail text-center"><img alt="More To Come. Stay Tuned!"
+                                                                    src="img/mega-menu-home/04.jpg">
+                            <h6 class="mt-3">صفحات در حال ساخت</h6>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="shop-grid-ls.html"><span>خرید / فروشگاه</span></a>
+                <ul class="sub-menu">
+                    <li><a href="shop-categories.html">دسته بندی فروشگاه</a></li>
+                    <li class="has-children"><a href="shop-grid-ls.html"><span>نمایش جدولی</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="shop-grid-ls.html">جدولی سایدبار از چپ</a></li>
+                            <li><a href="shop-grid-rs.html">جدولی سایدبار از راست</a></li>
+                            <li><a href="shop-grid-ns.html">جدولی بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a href="shop-list-ls.html"><span>نمایش لیستی ( خطی )</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="shop-list-ls.html">خطی سایدبار از چپ</a></li>
+                            <li><a href="shop-list-rs.html">خطی سایدبار از راست</a></li>
+                            <li><a href="shop-list-ns.html">خطی بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop-single.html">صفحه محصولات</a></li>
+                    <li><a href="cart.html">سبد خرید</a></li>
+                    <li class="has-children"><a href="checkout-address.html"><span>بررسی و پرداخت</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="checkout-address.html">آدرس</a></li>
+                            <li><a href="checkout-shipping.html">مراحل خرید</a></li>
+                            <li><a href="checkout-payment.html">پرداخت مبلغ</a></li>
+                            <li><a href="checkout-review.html">بازنگری</a></li>
+                            <li><a href="checkout-complete.html">تکمیل فرایند</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-megamenu"><a href="#"><span>مگامنو</span></a>
+                <ul class="mega-menu">
+                    <li><span class="mega-menu-title">دسته بندی های برتر</span>
+                        <ul class="sub-menu">
+                            <li><a href="#">کفشهای مردانه</a></li>
+                            <li><a href="#">کفشهای زنانه</a></li>
+                            <li><a href="#">تیشرت و لباس</a></li>
+                            <li><a href="#">ساعت ها</a></li>
+                            <li><a href="#">شلوارک و اسلش</a></li>
+                            <li><a href="#">گرد آویزها</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="mega-menu-title">بهترین خریداران</span>
+                        <ul class="sub-menu">
+                            <li><a href="#">محمد شجاع</a></li>
+                            <li><a href="#">علی رستم تبار</a></li>
+                            <li><a href="#">عباس فرجی</a></li>
+                            <li><a href="#">مقداد صفری</a></li>
+                            <li><a href="#">مسعود مجیدیان</a></li>
+                            <li><a href="#">مهدی شجاع</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <section class="promo-box" style="background-image: url(img/banners/02.jpg);"><span
+                            class="overlay-dark" style="opacity: .4;"></span>
+                            <div class="promo-box-content text-center padding-top-2x padding-bottom-2x">
+                                <h4 class="text-light text-thin text-shadow">مجموعه ای جدید از</h4>
+                                <h3 class="text-bold text-light text-shadow">عینک آفتابی</h3><a
+                                class="btn btn-sm btn-primary" href="#">همین حالا خرید کنید</a>
+                            </div>
+                        </section>
+                    </li>
+                    <li>
+                        <section class="promo-box" style="background-image: url(img/banners/03.jpg);">
+                            <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span
+                            class="overlay-dark" style="opacity: .45;"></span>
+                            <div class="promo-box-content text-center padding-top-2x padding-bottom-2x">
+                                <h3 class="text-bold text-light text-shadow">فروش ویژه و محدود</h3>
+                                <h4 class="text-light text-thin text-shadow">تخفیف ویژه 50 درصدی</h4><a
+                                class="btn btn-sm btn-primary" href="#">بیشتر بدانید</a>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="account-orders.html"><span>دسترسی اعضا</span></a>
+                <ul class="sub-menu">
+                    <li><a href="account-login.html">ورود / ثبت نام</a></li>
+                    <li><a href="account-password-recovery.html">فراموشی رمز عبور</a></li>
+                    <li><a href="account-orders.html">لیست سفارشات</a></li>
+                    <li><a href="account-wishlist.html">لیست علاقه مندی</a></li>
+                    <li><a href="account-profile.html">صفحه پروفایل</a></li>
+                    <li><a href="account-address.html">تلفن ها / آدرس خریداران</a></li>
+                    <li><a href="account-tickets.html">تیکت های من</a></li>
+                    <li><a href="account-single-ticket.html">صفحه تیکت</a></li>
+                </ul>
+            </li>
+            <li class="active"><a href="blog-rs.html"><span>وبلاگ</span></a>
+                <ul class="sub-menu">
+                    <li class="has-children"><a href="blog-rs.html"><span>طرح وبلاگ</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-rs.html">وبلاگ سایدبار در راست</a></li>
+                            <li><a href="blog-ls.html">وبلاگ سایدبار در چپ</a></li>
+                            <li><a href="blog-ns.html">وبلاگ بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children active"><a href="blog-single-rs.html"><span>صفحه پست مطلب</span></a>
+                        <ul class="sub-menu">
+                            <li class="active"><a href="blog-single-rs.html">مطلب با سایدبار راست</a></li>
+                            <li><a href="blog-single-ls.html">مطلب با سایدبار چپ</a></li>
+                            <li><a href="blog-single-ns.html">صفحه مطلب بدون سایدبار</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span>صفحات</span></a>
+                <ul class="sub-menu">
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contacts.html">ارتباط با ما</a></li>
+                    <li><a href="faq.html">Help / FAQ</a></li>
+                    <li><a href="order-tracking.html">سفارشات ثبت شده</a></li>
+                    <li><a href="search-results.html">جستجوی نتایج</a></li>
+                    <li><a href="404.html">404 صفحه پیدا نشد</a></li>
+                    <li><a href="coming-soon.html">بزودی می آییم</a></li>
+                    <li><a class="text-danger" href="docs/dev-setup.html">مستندات</a></li>
+                </ul>
+            </li>
+            <li class="has-megamenu"><a href="components/accordion.html"><span>قابلیت ها</span></a>
+                <ul class="mega-menu">
+                    <li><span class="mega-menu-title">گروه اول</span>
+                        <ul class="sub-menu">
+                            <li><a href="components/accordion.html">آکاردئون</a></li>
+                            <li><a href="components/alerts.html">هشدارها</a></li>
+                            <li><a href="components/buttons.html">دکمه ها</a></li>
+                            <li><a href="components/cards.html">کارد</a></li>
+                            <li><a href="components/carousel.html">لغزنده ها</a></li>
+                            <li><a href="components/countdown.html">شمارنده ها</a></li>
+                            <li><a href="components/forms.html">فرم ها</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="mega-menu-title">گروه دوم</span>
+                        <ul class="sub-menu">
+                            <li><a href="components/gallery.html">گالری</a></li>
+                            <li><a href="components/google-maps.html">گوگل مپ</a></li>
+                            <li><a href="components/images.html">جعبه تصاویر</a></li>
+                            <li><a href="components/list-group.html">نمایش گروهی خطی</a></li>
+                            <li><a href="components/market-social-buttons.html">دکمه های شبکه اجتماعی</a></li>
+                            <li><a href="components/media.html">اشیای رسانه</a></li>
+                            <li><a href="components/modal.html">مودال باکس</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="mega-menu-title">گروه سوم</span>
+                        <ul class="sub-menu">
+                            <li><a href="components/pagination.html">صفحه بندی</a></li>
+                            <li><a href="components/pills.html">انتخابگر ها</a></li>
+                            <li><a href="components/progress-bars.html">نوار پیشرفت</a></li>
+                            <li><a href="components/shop-items.html">آیتمهای فروشگاه</a></li>
+                            <li><a href="components/steps.html">مرحله بندی</a></li>
+                            <li><a href="components/tables.html">جداول</a></li>
+                            <li><a href="components/tabs.html">تب شو</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="mega-menu-title">گروه چهارم</span>
+                        <ul class="sub-menu">
+                            <li><a href="components/team.html">گروه</a></li>
+                            <li><a href="components/toasts.html">نمایش رویدادها</a></li>
+                            <li><a href="components/tooltips-popovers.html">تولتیپ و حباب عنوان</a></li>
+                            <li><a href="components/typography.html">تایپوگرافی</a></li>
+                            <li><a href="components/video-player.html">ویدئو پلیر</a></li>
+                            <li><a href="components/widgets.html">ابزارک ها</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Toolbar-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt="Daniel Adams">
+                            </div>
+                            <div class="user-info">
+                                <h6 class="user-name">محمد شجاع</h6><span
+                                class="text-xs text-muted">290 خرید ثبت شده</span>
+                            </div>
+                        </li>
+                        <li><a href="account-profile.html">مشخصات من</a></li>
+                        <li><a href="account-orders.html">لیست سفارشات</a></li>
+                        <li><a href="account-wishlist.html">علاقه مندیها</a></li>
+                        <li class="sub-menu-separator"></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modalLogin"><i class="icon-unlock"></i>جعبه
+                            ورود</a></li>
+                        <li><a href="#"> <i class="icon-unlock"></i>خروج</a></li>
+                    </ul>
+                </div>
+                <div class="cart"><a href="cart.html"></a><i class="icon-bag"></i><span class="count">3</span><span
+                    class="subtotal">98300 تومان</span>
+                    <div class="toolbar-dropdown">
+                        <div class="dropdown-product-item"><span class="dropdown-product-remove"><i
+                            class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img
+                            src="img/cart-dropdown/01.jpg" alt="Product"></a>
+                            <div class="dropdown-product-info"><a class="dropdown-product-title"
+                                                                  href="shop-single.html">کفش ورزشی مردانه</a><span
+                                class="dropdown-product-details">54200 تومان</span> <span
+                                class="dropdown-product-details"> - 2</span></div>
+                        </div>
+                        <div class="dropdown-product-item"><span class="dropdown-product-remove"><i
+                            class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img
+                            src="img/cart-dropdown/02.jpg" alt="Product"></a>
+                            <div class="dropdown-product-info"><a class="dropdown-product-title"
+                                                                  href="shop-single.html">کلاه بازی تنیس</a><span
+                                class="dropdown-product-details">54200 تومان</span> <span
+                                class="dropdown-product-details"> - 2</span></div>
+                        </div>
+                        <div class="dropdown-product-item"><span class="dropdown-product-remove"><i
+                            class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img
+                            src="img/cart-dropdown/03.jpg" alt="Product"></a>
+                            <div class="dropdown-product-info"><a class="dropdown-product-title"
+                                                                  href="shop-single.html">کیف زنانه چرم آبی</a><span
+                                class="dropdown-product-details">54200 تومان</span> <span
+                                class="dropdown-product-details"> - 2</span></div>
+                        </div>
+                        <div class="toolbar-dropdown-group">
+                            <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart.html">نمایش
+                                سبد</a></div>
+                            <div class="column"><a class="btn btn-sm btn-block btn-success"
+                                                   href="checkout-address.html">تسویه</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Off-Canvas Wrapper-->
+<div class="offcanvas-wrapper">
+    <!-- Page Title-->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>صفحه مطلب با سایدبار راست</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">خانه</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li><a href="blog-rs.html">وبلاگ</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>مطلب با ساید بار راست</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-2 text-right">
+        <div class="row">
+            <!-- Content-->
+            <div class="col-xl-9 col-lg-8 soft-shadow bg-white pt-3 pb-3">
+                <!-- Post-->
+                <div class="single-post-meta">
+                    <div class="column">
+                        <div class="meta-link"><span> توسط </span>محمد شجاع</div>
+                        <div class="meta-link"><span> در </span><a href="#">فشن ,&nbsp;</a><a href="#">مسافرت</a></div>
+                    </div>
+                    <div class="column">
+                        <div class="meta-link"><a href="#"><i class="icon-clock"></i> دوشنبه 3 اردیبهشت 97</a></div>
+                        <div class="meta-link"><a class="scroll-to" href="#comments"> <i class="icon-speech-bubble"></i>
+                            3</a></div>
+                    </div>
+                </div>
+                <div class="owl-carousel"
+                     data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true }">
+                    <figure><img src="img/blog/single/01.jpg" alt="Image">
+                        <figcaption class="text-white">Image Caption</figcaption>
+                    </figure>
+                    <figure><img src="img/blog/single/02.jpg" alt="Image">
+                        <figcaption class="text-white">Image Caption</figcaption>
+                    </figure>
+                    <figure><img src="img/blog/single/03.jpg" alt="Image">
+                        <figcaption class="text-white">Image Caption</figcaption>
+                    </figure>
+                </div>
+                <h2 class="padding-top-2x">روند جدید در مدرن حومه</h2>
+                <p style="text-align:justify">Lorem Ipsum در اندوه نشسته آمت، بسیار آسان، tempor نهفته sed و نشاط، به
+                    طوری که کار و غم و اندوه، بعضی چیز ها مهم را به انجام eiusmod. در طول این سالها، من خواهد آمد، کسی
+                    که به aliquip از او nostrud استفاده از ورزش، به طوری که تلاش های محرک اگر منطقه مدرسه و طول عمر. می
+                    خواهم به یک درد در cillum cupidatat است در Duis همکاران dolore مگنا انتقاد قرار گرفته است فرار تولید
+                    هیچ لذتی حاصل. سیاه پوستان cupidatat Excepteur نیست excepteur، تسکین دهنده به روح، است که، آنها
+                    وظایف عمومی از کسانی که به برای مشکلات خود را سرزنش را ترک کردند. دانلود اطلاعات به عنوان کارت مجازی
+                    E-چه کسی از ما باید ورزش.</p>
+                <p>Lorem Ipsum در اندوه نشسته آمت، بسیار آسان، tempor نهفته sed و نشاط، به طوری که کار و غم و اندوه،
+                    بعضی چیز ها مهم را به انجام eiusmod. در طول این سالها، من خواهد آمد، کسی که به aliquip از او nostrud
+                    استفاده از ورزش، به طوری که تلاش های محرک اگر منطقه مدرسه و طول عمر. می خواهم به یک درد در cillum
+                    cupidatat است در Duis همکاران dolore مگنا انتقاد قرار گرفته است فرار تولید هیچ لذتی حاصل. سیاه
+                    پوستان cupidatat Excepteur نیست excepteur، تسکین دهنده به روح، است که، E-چه کسی از ما باید ورزش.</p>
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <blockquote class="margin-top-1x margin-bottom-1x">
+                            <p>شما به شما یک حساب کامل از سیستم میدانید که این ایده اشتباه محکوم لذت از و ستایش درد بود،
+                                و به تفصیل شرح تعالیم واقعی از بزرگ است.</p>
+                            <cite> محمد شجاع </cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <p class="mt-2">اعتقاد ما بر ارزش آنها، و deleniti آنها توسط حرص از این درد، و برای که او در مشکلات از
+                    OMNIS، وظایف کسانی که می خواهند به طور کلی از روح ترک را پیش بینی نمی کور آنها کسانی که نفرت صالح،
+                    اما در حقیقت، و، خراب شده توسط چاپلوسی از حال و لذت متهم، و در همان فصل در گسل، است که، کار و دردناک
+                    خود. اما این نیاز به تمایز ساده و آسان است.</p>
+                <div class="single-post-footer">
+                    <div class="column"><a class="sp-tag" href="#">#طراحی دکوراسیون,</a><a class="sp-tag" href="#">&nbsp;#مد
+                        و فشن,</a><a class="sp-tag" href="#">&nbsp;#مسافرت</a></div>
+                    <div class="column">
+                        <div class="entry-share"><span class="text-muted">اشتراک گذاری:</span>
+                            <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#"
+                                                        data-toggle="tooltip" data-placement="top" title="فیس بوک"><i
+                                class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter"
+                                                                    href="#" data-toggle="tooltip" data-placement="top"
+                                                                    title="توییتر"><i class="socicon-twitter"></i></a><a
+                                class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip"
+                                data-placement="top" title="اینستاگرام"><i class="socicon-instagram"></i></a><a
+                                class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip"
+                                data-placement="top" title="گوگل + "><i class="socicon-googleplus"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post Navigation-->
+                <div class="entry-navigation">
+                    <div class="column text-left"><a class="btn btn-outline-secondary btn-sm" href="#"><i
+                        class="icon-arrow-right"></i>&nbsp; قبلی</a></div>
+                    <div class="column"><a class="btn btn-outline-secondary view-all" href="blog-rs.html"
+                                           data-toggle="tooltip" data-placement="top"
+                                           title="نمایش تمام پست های این دسته"><i class="icon-menu"></i></a></div>
+                    <div class="column text-right"><a class="btn btn-outline-secondary btn-sm" href="#">بعدی &nbsp;<i
+                        class="icon-arrow-left"></i></a></div>
+                </div>
+                <!-- Relevant Posts-->
+                <h3 class="padding-top-3x padding-bottom-1x">ممکن است از این مطالب خوشتان بیاید</h3>
+                <div style="background-color: #e8e8e8;" class="owl-carousel pt-3"
+                     data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: false, &quot;autoHeight&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;630&quot;:{&quot;items&quot;:2},&quot;991&quot;:{&quot;items&quot;:3},&quot;1200&quot;:{&quot;items&quot;:3}} }">
+                    <div class="widget widget-featured-posts">
+                        <div class="entry">
+                            <div class="entry-thumb"><a href="#"><img src="img/blog/widget/01.jpg" alt="Post"></a></div>
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="#">پوتین زمستانی زنانه برای فصول سرد سال</a></h4><span
+                                class="entry-meta">توسط محمد شجاع</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-featured-posts">
+                        <div class="entry">
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="#">سفرهای جهانی و تعطیلات مسافرتی لوکس در بودجه تنگ
+                                    همراه با سرویس ویژه </a></h4><span class="entry-meta">توسط دیوید دیکاپریو</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-featured-posts">
+                        <div class="entry">
+                            <div class="entry-thumb"><a href="#"><img src="img/blog/widget/03.jpg" alt="Post"></a></div>
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="#">کفشهای ورزشی تابستانی نرم و راحت</a></h4><span
+                                class="entry-meta">توسط محمد شجاع</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-featured-posts">
+                        <div class="entry">
+                            <div class="entry-thumb"><a href="#"><img src="img/blog/widget/02.jpg" alt="Post"></a></div>
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="#">گوشواره سبک پهن مدل سکه ای بسیار زیبا</a></h4><span
+                                class="entry-meta">توسط محمد شجاع</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-featured-posts">
+                        <div class="entry">
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="#">چگونه میتوانید یک مدل فشن بسیار جذاب و حرفه ای
+                                    باشید</a></h4><span class="entry-meta">توسط محمد شجاع</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comments-->
+                <section class="padding-top-3x" id="comments">
+                    <h3 class="padding-bottom-1x">دیدگاه های شما</h3>
+                    <!-- Comment-->
+                    <div class="comment">
+                        <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Comment author"></div>
+                        <div class="comment-body">
+                            <div class="comment-header">
+                                <h4 class="comment-title">یک عضو جدید</h4>
+                            </div>
+                            <p class="comment-text">اعتقاد ما بر ارزش آنها، و deleniti آنها توسط حرص از این درد، و برای
+                                که او در مشکلات از OMNIS، وظایف کسانی که می خواهند به طور کلی از روح ترک را پیش بینی نمی
+                                کور آنها کسانی که نفرت صالح، اما در حقیقت، و، خراب شده توسط چاپلوسی از حال و لذت متهم، و
+                                در همان فصل در گسل، است که، کار و دردناک خود.</p>
+                            <div class="comment-footer">
+                                <div class="column"><span class="comment-meta">2 دقیقه پیش</span></div>
+                                <div class="column"><a class="reply-link" href="#"><i class="icon-reply"></i>پاسخ</a>
+                                </div>
+                            </div>
+                            <!-- Comment reply-->
+                            <div class="comment comment-reply">
+                                <div class="comment-author-ava"><img src="img/reviews/02.jpg" alt="Comment author">
+                                </div>
+                                <div class="comment-body">
+                                    <div class="comment-header">
+                                        <h4 class="comment-title">مانا فرضیایی</h4>
+                                    </div>
+                                    <p class="comment-text">Lorem Ipsum در اندوه نشسته آمت، بسیار آسان، tempor نهفته sed
+                                        و نشاط، به طوری که کار و غم و اندوه، بعضی چیز ها مهم را به انجام eiusmod. در طول
+                                        این سالها، من خواهد آمد، کسی که به aliquip از او nostrud استفاده از ورزش، به
+                                        طوری که تلاش های محرک اگر منطقه مدرسه و طول عمر.</p>
+                                    <div class="comment-footer"><span class="comment-meta"> 1 روز پیش</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment-->
+                    <div class="comment">
+                        <div class="comment-author-ava"><img src="img/reviews/03.jpg" alt="Comment author"></div>
+                        <div class="comment-body">
+                            <div class="comment-header">
+                                <h4 class="comment-title">علی رستم تبار</h4>
+                            </div>
+                            <p class="comment-text">برای هیچ کس را رد، دوست نداشتن، یا اجتناب لذت خود است، زیرا آن لذت
+                                بخش است، اما به دلیل آنها نمی دانند که چگونه به دنبال لذت عقلانی روبرو می شوند که عواقب
+                                غم از کسانی که هستند.</p>
+                            <div class="comment-footer">
+                                <div class="column"><span class="comment-meta">5 روز پیش</span></div>
+                                <div class="column"><a class="reply-link" href="#"><i class="icon-reply"></i>پاسخ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Comment Form-->
+                <h4 class="padding-top-2x padding-bottom-1x">افزودن یک دیدگاه</h4>
+                <form class="row" method="post">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="comment-name">نام</label>
+                            <input class="form-control form-control-rounded" type="text" id="comment-name"
+                                   placeholder="محمد شجاع" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="comment-email">ایمیل</label>
+                            <input class="form-control form-control-rounded" type="email" id="comment-email"
+                                   placeholder="mohammadshoja65@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="comment-text">متن دیدگاه</label>
+                            <textarea class="form-control form-control-rounded" rows="7" id="comment-text"
+                                      placeholder="دیدگاه خود را در اینجا بنویسید ..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 text-right">
+                        <button class="btn btn-pill btn-primary" type="submit">ارسال دیدگاه</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Sidebar          -->
+            <div class="col-xl-3 col-lg-4 ">
+                <aside class="sidebar soft-shadow bg-white pt-3 pr-1 pl-1 pb-3">
+                    <div class="padding-top-2x hidden-lg-up"></div>
+                    <!-- Widget Search-->
+                    <section class="widget widget-border mb-2">
+                        <form class="input-group form-group" method="get"><span class="input-group-btn">
+                    <button type="submit"><i class="icon-search"></i></button></span>
+                            <input class="form-control" type="search" placeholder="جستجو در وبلاگ">
+                        </form>
+                    </section>
+                    <!-- Widget Categories-->
+                    <section class="widget widget-categories widget-border bg-white mb-2">
+                        <h3 class="widget-title">دسته بندی بلاگ</h3>
+                        <ul>
+                            <li><a href="#">انتخاب سردبیر </a><span>(24)</span></li>
+                            <li><a href="#">فشن و مد</a><span>(12)</span></li>
+                            <li><a href="#">مسافرت </a><span>(5)</span></li>
+                            <li><a href="#">خرید آنلاین </a><span>(7)</span></li>
+                            <li><a href="#">بستن طراحی </a><span>(3)</span></li>
+                        </ul>
+                    </section>
+                    <!-- Widget Featured Posts-->
+                    <section class="widget widget-featured-posts widget-border bg-white mb-2">
+                        <h3 class="widget-title">مطالب ویژه</h3>
+                        <!-- Entry-->
+                        <div class="entry">
+                            <div class="entry-thumb"><a href="blog-single-rs.html"><img src="img/blog/widget/01.jpg"
+                                                                                        alt="Post"></a></div>
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="blog-single-rs.html">چکمه های زمستانی محبوب</a></h4>
+                                <span class="entry-meta">توسط محمد شجاع</span>
+                            </div>
+                        </div>
+                        <!-- Entry-->
+                        <div class="entry">
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="blog-single-rs.html">سفرهای جهانی و تعطیلات مسافرتی
+                                    لوکس در بودجه تنگ</a></h4><span class="entry-meta">توسط علی همت تبار</span>
+                            </div>
+                        </div>
+                        <!-- Entry-->
+                        <div class="entry">
+                            <div class="entry-thumb"><a href="blog-single-rs.html"><img src="img/blog/widget/02.jpg"
+                                                                                        alt="Post"></a></div>
+                            <div class="entry-content">
+                                <h4 class="entry-title"><a href="blog-single-rs.html">گوشواره هوپ یک سبک از تاریخ</a>
+                                </h4><span class="entry-meta">توسط مانا ضیایی</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Widget Tags-->
+                    <section class="widget widget-tags bg-white soft-shadow pt-2 pb-2 pr-2 pl-2 mb-2">
+                        <h3 class="widget-title">کلمات پر کاربرد</h3>
+                        <a class="tag" href="#">#طراحی</a>
+                        <a class="tag" href="#">#مد و فشن</a>
+                        <a class="tag" href="#">#مسافرت</a>
+                        <span class="tag active">#تگ فعال</span>
+                        <a class="tag" href="#">#خرید کردن</a>
+                    </section>
+                    <!-- Promo Banner-->
+                    <section class="promo-box soft-shadow" style="background-image: url(img/banners/01.jpg);">
+                        <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span
+                        class="overlay-dark" style="opacity: .35;"></span>
+                        <div class="promo-box-content text-center padding-top-2x padding-bottom-2x">
+                            <h3 class="text-bold text-light text-shadow">جدید 2017<br>مجموعه دستبند ها</h3>
+                            <h4 class="text-light text-thin text-shadow">تازه وارد شده است</h4><a
+                            class="btn btn-sm btn-primary" href="shop-grid-ls.html">همین حالا بخرید</a>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <!-- Site Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <!-- Contact Info-->
+                    <section class="widget widget-light-skin">
+                        <h3 class="widget-title">ارتباط با ما</h3>
+                        <p class="text-white">تلفن (محمد شجاع ) : 1323 - 350 - 0935</p>
+                        <p class="text-white">ایمیل : mohammadshoja65@gmail.com</p>
+                        <p class="text-white">وبسایت : <a class="navi-link-light" href="http://moderniz.ir">http://moderniz.ir</a>
+                        </p>
+                        <p><a class="navi-link-light" href="http://moderniz.ir">توسعه و ترجمه تیم نرم افزاری مدرنیز</a>
+                        </p>
+                        <a class="social-button shape-circle sb-facebook sb-light-skin" href="#"><i
+                            class="socicon-facebook"></i></a>
+                        <a class="social-button shape-circle sb-twitter sb-light-skin" href="#"><i
+                            class="socicon-twitter"></i></a>
+                        <a class="social-button shape-circle sb-instagram sb-light-skin" href="#"><i
+                            class="socicon-instagram"></i></a>
+                        <a class="social-button shape-circle sb-google-plus sb-light-skin" href="#"><i
+                            class="socicon-googleplus"></i></a>
+                    </section>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <!-- Mobile App Buttons-->
+                    <section class="widget widget-light-skin">
+                        <h3 class="widget-title">دکمه های مارکت موبایل</h3>
+                        <a class="market-button apple-button mb-light-skin" href="#">
+                            <span class="mb-subtitle">دانلود از مارکت</span>
+                            <span class="mb-title">اپ استور</span>
+                        </a>
+                        <a class="market-button google-button mb-light-skin" href="#">
+                            <span class="mb-subtitle">دانلود از مارکت</span>
+                            <span class="mb-title">گوگل پلی</span></a>
+                        <a class="market-button windows-button mb-light-skin" href="#">
+                            <span class="mb-subtitle">دانلود از مارکت</span>
+                            <span class="mb-title">ویندوز استور</span>
+                        </a>
+                    </section>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <!-- About Us-->
+                    <section class="widget widget-links widget-light-skin">
+                        <h3 class="widget-title">درباره ما</h3>
+                        <ul>
+                            <li><a href="#">حرفه و مهارت</a></li>
+                            <li><a href="moderniz.ir">درباره مدرنیزز</a></li>
+                            <li><a href="#">بیشتر بدانید</a></li>
+                            <li><a href="#">خدمات و سرویسها</a></li>
+                            <li><a href="#">وبلاگ گروه</a></li>
+                            <li><a href="#">مزایای استفاده از این قالب</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <!-- Account / Shipping Info-->
+                    <section class="widget widget-links widget-light-skin">
+                        <h3 class="widget-title">مشخصات حساب و دسترسی شما</h3>
+                        <ul>
+                            <li><a href="account-profile.html">پروفایل شما</a></li>
+                            <li><a href="account-profile.html">قیمت و حمل و نقل</a></li>
+                            <li><a href="account-profile.html">بازپرداخت و جایگزینی</a></li>
+                            <li><a href="account-profile.html">مالیات</a></li>
+                            <li><a href="account-address.html">اطلاعات تحویل</a></li>
+                            <li><a href="account-profile.html">برنامه های وابسته</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <hr class="hr-light mt-2 margin-bottom-2x">
+            <div class="row">
+                <div class="col-md-7 padding-bottom-1x">
+                    <!-- Payment Methods-->
+                    <div class="margin-bottom-1x" style="max-width: 615px;"><img src="img/payment_methods.png"
+                                                                                 alt="Payment Methods">
+                    </div>
+                </div>
+                <div class="col-md-5 padding-bottom-1x">
+                    <div class="margin-top-1x hidden-md-up"></div>
+                    <!--Subscription-->
+                    <form class="subscribe-form" action="http://moderniz.ir" method="post" target="_blank" novalidate>
+                        <div class="clearfix">
+                            <div class="input-group input-light">
+                                <input class="form-control" type="email" name="EMAIL"
+                                       placeholder="ایمیل خود را وارد کنید ..."><span class="input-group-addon"><i
+                                class="icon-mail"></i></span>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1">
+                            </div>
+                            <button class="btn btn-primary" type="submit"><i class="icon-check"></i></button>
+                        </div>
+                        <span class="form-text text-sm text-white opacity-50 text-right">برای عضویت در خبرنامه , دریافت تخفیف ها , آخرین اخبار ، و فروش های ویژه </span>
+                    </form>
+                </div>
+            </div>
+            <!-- Copyright-->
+            <p class="footer-copyright text-right">© کلیه حقوق محفوظ است , ایجاد شده توسط &nbsp;<i
+                class="icon-heart text-danger"></i><a href="http://moderniz.ir/" target="_blank"> &nbsp;محمد شجاع</a>
+            </p>
+        </div>
+    </footer>
+</div>
+<!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+<!-- Backdrop-->
+<div class="site-backdrop"></div>
+<!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+<script src="js/vendor.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script src="js/fancy-slider/index.js"></script>
+</body>
+</html>
