@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->TruncateDatabase();
         $this->call([
+            PhotoSeeder::class,
             ProductSeeder::class
         ]);
     }

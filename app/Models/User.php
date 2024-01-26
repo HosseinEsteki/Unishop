@@ -3,7 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Http\Classes\Enums\DefaultPhoto;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,6 +24,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+    ];
+
+    protected $attributes = [
+        'photo_id' => DefaultPhoto::Profile
     ];
 
     /**
@@ -45,6 +51,11 @@ class User extends Authenticatable
     ];
 
     #region Relations
+    public function photo(): BelongsTo
+    {
+        return $this->belongsTo(Photo::class);
+    }
+
     public function wishLists(): HasMany
     {
         return $this->hasMany(WishList::class);
