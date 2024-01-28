@@ -6,6 +6,7 @@ use App\Http\Classes\CategoryConvert;
 use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
 class CategoryMenu extends Component
@@ -24,6 +25,7 @@ class CategoryMenu extends Component
     public function render(): View|Closure|string
     {
         $categories = CategoryConvert::categoriesToArray(Category::all());
-        return view('components.off-canvas.category-menu', compact('categories'));
+        $user = Auth::user();
+        return view('components.off-canvas.category-menu', compact('categories', 'user'));
     }
 }

@@ -1,11 +1,13 @@
 <!-- Off-Canvas Category Menu-->
 <div class="offcanvas-container" id="shop-categories">
-    <a class="account-link" href="account-orders.html">
-        <div class="user-ava"><img src="/unishop-theme/img/account/user-ava-md.jpg" alt="Daniel Adams"></div>
-        <div class="user-info">
-            <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
-        </div>
-    </a>
+    @auth()
+        <a class="account-link" href="{{route('account.profile')}}">
+            <div class="user-ava"><img src="{{$user->profilePhoto}}" alt="{{$user->name}}"></div>
+            <div class="user-info">
+                <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
+            </div>
+        </a>
+    @endauth
     <nav class="offcanvas-menu">
         <ul class="menu">
             @foreach($categories as $category)
