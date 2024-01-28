@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('parent')->nullable();
             $table->string('name');
             $table->string('address');
             $table->foreignId('photo_id')->constrained()->noActionOnDelete();
