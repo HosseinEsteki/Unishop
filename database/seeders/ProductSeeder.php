@@ -57,10 +57,10 @@ class ProductSeeder extends Seeder
         View::factory(20)->create();
         Rate::factory(20)->create();
 
-        Category::factory(15)
-            ->has(Photo::factory(1))
-            ->hasAttached($tags->random(3))
-            ->create();
+//        Category::factory(15)
+//            ->has(Photo::factory(1))
+//            ->hasAttached($tags->random(3))
+//            ->create();
 
         WishList::factory(30)->create();
 

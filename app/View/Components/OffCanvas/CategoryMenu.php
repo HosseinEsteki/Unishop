@@ -2,6 +2,8 @@
 
 namespace App\View\Components\OffCanvas;
 
+use App\Http\Classes\CategoryConvert;
+use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +23,7 @@ class CategoryMenu extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.off-canvas.category-menu');
+        $categories = CategoryConvert::categoriesToArray(Category::all());
+        return view('components.off-canvas.category-menu', compact('categories'));
     }
 }
