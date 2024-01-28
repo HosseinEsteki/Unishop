@@ -1,13 +1,13 @@
 <!-- Off-Canvas Category Menu-->
 <div class="offcanvas-container" id="shop-categories">
-    @auth
-        <a class="account-link" href="{{route('account.profile')}}">
+    <a class="account-link" href="@auth{{route('account.profile')}}@else # @endauth">
+        @auth
             <div class="user-ava"><img src="{{$user->profilePhoto}}" alt="{{$user->name}}"></div>
             <div class="user-info">
                 <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
             </div>
-        </a>
-    @endauth
+        @endauth
+    </a>
     <nav class="offcanvas-menu">
         <ul class="menu">
             @foreach($categories as $category)
