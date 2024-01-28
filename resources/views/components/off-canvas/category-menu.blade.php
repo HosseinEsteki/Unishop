@@ -1,6 +1,6 @@
 <!-- Off-Canvas Category Menu-->
 <div class="offcanvas-container" id="shop-categories">
-    @auth()
+    @auth
         <a class="account-link" href="{{route('account.profile')}}">
             <div class="user-ava"><img src="{{$user->profilePhoto}}" alt="{{$user->name}}"></div>
             <div class="user-info">
