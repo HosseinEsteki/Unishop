@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Settings\TopBar;
 use App\Models\User;
 use App\Models\WishList;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,8 @@ class DatabaseSeeder extends Seeder
             PhotoSeeder::class,
             ProductSeeder::class,
             CategorySeeder::class,
+            SocialMediaSeeder::class,
+            TopBarSeeder::class,
         ]);
     }
 
