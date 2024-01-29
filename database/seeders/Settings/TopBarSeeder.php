@@ -1,10 +1,9 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\Settings;
 
 use App\Http\Classes\Enums\TopBarType;
 use App\Models\Settings\TopBar;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TopBarSeeder extends Seeder

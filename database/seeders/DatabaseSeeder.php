@@ -3,13 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Settings\TopBar;
-use App\Models\User;
-use App\Models\WishList;
+use Database\Seeders\Settings\SocialMediaSeeder;
+use Database\Seeders\Settings\TopBarSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
