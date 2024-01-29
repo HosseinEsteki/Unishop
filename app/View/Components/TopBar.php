@@ -21,6 +21,7 @@ class TopBar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.top-bar');
+        $topBars = \App\Models\Settings\TopBar::orderBy('priority')->get();
+        return view('components.top-bar', compact('topBars'));
     }
 }
