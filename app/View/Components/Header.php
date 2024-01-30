@@ -2,6 +2,8 @@
 
 namespace App\View\Components;
 
+use App\Http\Classes\ConvertToArray;
+use App\Models\Menu;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +23,7 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.header');
+        $menus = ConvertToArray::menusToArray(Menu::with('category')->get());
+        return view('components.header', compact('menus'));
     }
 }
