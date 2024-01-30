@@ -4,7 +4,7 @@ namespace App\Http\Classes;
 
 use Illuminate\Database\Eloquent\Collection;
 
-class CategoryConvert
+class ConvertToArray
 {
     public static function categoriesToArray(Collection $categories): array
     {
