@@ -12,14 +12,14 @@
                                                            data-toggle="offcanvas"></a>
             <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle " href="#mobile-menu"
                                                        data-toggle="offcanvas"></a>
-            <!-- Site Logo--><a class="site-logo" href="index.html"><img src="/unishop-theme/img/logo/logo.png"
-                                                                         alt="Unishop"></a>
+            <!-- Site Logo--><a class="site-logo" href="/"><img src="{{Setting::getValue('logo_address')}}"
+                                                                alt="{{Setting::getValue('store_name')}}"></a>
         </div>
     </div>
     <!-- Main Navigation-->
     <nav class="site-menu">
         <ul>
-            <li class="has-megamenu"><a href="index.html"><span>خانه</span></a>
+            <li class="has-megamenu"><a href="#"><span>خانه</span></a>
                 <ul class="mega-menu">
                     <li><a class="d-block img-thumbnail text-center navi-link" href="index.html"><img
                                 alt="Featured Products Slider" src="/unishop-theme/img/mega-menu-home/01.jpg">
