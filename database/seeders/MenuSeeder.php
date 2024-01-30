@@ -19,22 +19,24 @@ class MenuSeeder extends Seeder
         $menus1 = [];
         $parentCounter = 1;
         foreach ($categories as $category) {
-            $menus1[] = [
+            $menu = [
                 'parent' => null,
                 'priority' => $parentCounter,
                 'category_id' => $category['id'],
             ];
+            $model = Menu::create($menu);
             $counter = 1;
+            $menus = [];
             foreach ($category['items'] as $item) {
-                $menus1[] = [
-                    'parent' => $category['id'],
+                $menus[] = [
+                    'parent' => $model->id,
                     'priority' => $counter,
                     'category_id' => $item['id'],
                 ];
                 $counter++;
             }
+            Menu::insert($menus);
         }
-        Menu::insert($menus1);
         $menus2[] = [
             'priority' => 4,
             'page_name' => 'درباره ما',
