@@ -16,9 +16,10 @@ class Setting extends Model
 
     public static function getValue(string $name)
     {
-        if (Setting::where('name', $name)->first() == null)
+        $setting = Setting::where('name', $name)->first();
+        if ($setting == null)
             return null;
         else
-            return Setting::where('name', 'store_name')->first()->value;
+            return $setting->value;
     }
 }
