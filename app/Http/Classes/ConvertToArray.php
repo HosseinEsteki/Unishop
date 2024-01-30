@@ -33,6 +33,7 @@ class ConvertToArray
                 'id' => $parent->id,
                 'priority' => $parent->priority,
                 'category_id' => $parent->category_id,
+                'category' => $parent->category,
                 'page_name' => $parent->page_name,
                 'page_url' => $parent->page_url,
                 'items' => $children->where('parent', '=', $parent->id)->except(['parent'])->toArray()
