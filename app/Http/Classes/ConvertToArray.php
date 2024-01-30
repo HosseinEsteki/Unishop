@@ -15,7 +15,7 @@ class ConvertToArray
             $newArray[] = [
                 'id' => $parent->id,
                 'name' => $parent->name,
-                'address' => $parent->address,
+                'slug' => $parent->address,
                 'photo_id' => $parent->photo_id,
                 'items' => $children->where('parent', '=', $parent->id)->toArray()
             ];

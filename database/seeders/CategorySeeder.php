@@ -19,15 +19,15 @@ class CategorySeeder extends Seeder
         $mainCategories = [
             [
                 'name' => 'شیشه و بلور',
-                'address' => 'glass',
+                'slug' => 'glass',
                 'photo_id' => DefaultPhoto::Category
             ], [
                 'name' => 'پلاستیک',
-                'address' => 'plastic',
+                'slug' => 'plastic',
                 'photo_id' => DefaultPhoto::Category
             ], [
                 'name' => 'قابلمه و ماهیتابه',
-                'address' => 'pot',
+                'slug' => 'pot',
                 'photo_id' => DefaultPhoto::Category
             ]
         ];
@@ -39,57 +39,57 @@ class CategorySeeder extends Seeder
             [
                 'parent' => 1,
                 'name' => 'پارچ و لیوان',
-                'address' => 'parch',
+                'slug' => 'parch',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 1,
                 'name' => 'نیم لیوان',
-                'address' => 'estekan',
+                'slug' => 'estekan',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 1,
                 'name' => 'ظرف غذا',
-                'address' => 'food-zarf',
+                'slug' => 'food-zarf',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 2,
                 'name' => 'آینه حمام',
-                'address' => 'doosh',
+                'slug' => 'doosh',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 2,
                 'name' => 'بهداشت منزل',
-                'address' => 'behdasht',
+                'slug' => 'behdasht',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 2,
                 'name' => 'مدیریت لباس ها',
-                'address' => 'dress',
+                'slug' => 'dress',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 3,
                 'name' => 'سرویس قابلمه',
-                'address' => 'service',
+                'slug' => 'service',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 3,
                 'name' => 'چدن',
-                'address' => 'chodan',
+                'slug' => 'chodan',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 3,
                 'name' => 'گرانیت',
-                'address' => 'granit',
+                'slug' => 'granit',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 3,
                 'name' => 'روحی',
-                'address' => 'roohi',
+                'slug' => 'roohi',
                 'photo_id' => DefaultPhoto::Category,
             ], [
                 'parent' => 3,
                 'name' => 'قابلمه ماهیتابه تک',
-                'address' => 'tak',
+                'slug' => 'tak',
                 'photo_id' => DefaultPhoto::Category,
             ],
         ];

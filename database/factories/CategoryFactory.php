@@ -24,7 +24,7 @@ class CategoryFactory extends Factory
         $created_at = $this->faker->dateTime($updated_at);
         return [
             'name' => $this->faker->word(),
-            'address' => $this->faker->slug,
+            'slug' => $this->faker->slug,
             'photo_id' => $photoId,
             'created_at' => $created_at,
             'updated_at' => $updated_at

@@ -15,7 +15,7 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        'address',
+        'slug',
     ];
     protected $attributes = [
         'parent' => null,
