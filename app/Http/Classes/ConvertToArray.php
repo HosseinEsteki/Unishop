@@ -22,4 +22,22 @@ class ConvertToArray
         }
         return $newArray;
     }
+
+    public static function menusToArray(Collection $menus)
+    {
+        $newArray = [];
+        $parents = $menus->where('parent', '=', null);
+        $children = $menus->where('parent', '!=', null);
+        foreach ($parents as $parent) {
+            $newArray[] = [
+                'id' => $parent->id,
+                'priority' => $parent->priority,
+                'category_id' => $parent->category_id,
+                'page_name' => $parent->page_name,
+                'page_url' => $parent->page_url,
+                'items' => $children->where('parent', '=', $parent->id)->except(['parent'])->toArray()
+            ];
+        }
+        return $newArray;
+    }
 }
