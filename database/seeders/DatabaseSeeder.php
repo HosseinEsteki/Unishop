@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             SocialMediaSeeder::class,
             TopBarSeeder::class,
-            SettingSeeder::class
+            SettingSeeder::class,
+            MenuSeeder::class,
         ]);
     }
 
