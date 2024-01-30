@@ -12,8 +12,8 @@
                                                            data-toggle="offcanvas"></a>
             <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle " href="#mobile-menu"
                                                        data-toggle="offcanvas"></a>
-            <!-- Site Logo--><a class="site-logo" href="/"><img src="{{Setting::getValue('logo_address')}}"
-                                                                alt="{{Setting::getValue('store_name')}}"></a>
+            <!-- Site Logo--><a class="site-logo" href="/"><img src="{{Setting::getValue('logoAddress')}}"
+                                                                alt="{{Setting::getValue('storeName')}}"></a>
         </div>
     </div>
     <!-- Main Navigation-->
