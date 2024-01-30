@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Setting;
 use Database\Seeders\Settings\SocialMediaSeeder;
 use Database\Seeders\Settings\TopBarSeeder;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             SocialMediaSeeder::class,
             TopBarSeeder::class,
+            SettingSeeder::class
         ]);
     }
 
