@@ -17,7 +17,7 @@ class ConvertToArray
                 'name' => $parent->name,
                 'slug' => $parent->address,
                 'photo_id' => $parent->photo_id,
-                'items' => $children->where('parent', '=', $parent->id)->toArray()
+                'items' => $children->where('parent', '=', $parent->id)->except(['parent'])->toArray()
             ];
         }
         return $newArray;
