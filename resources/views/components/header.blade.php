@@ -1,7 +1,7 @@
 <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
 <header class="navbar navbar-sticky">
     <!-- Search-->
-    <form class="site-search" method="get">
+    <form class="site-search" method="get" action="{{route('search')}}">
         <input type="text" name="site_search" placeholder="عبارت مورد جستجو را تایپ کنید . . .">
         <div class="search-tools"><span class="clear-search hidden-xs-down">پاک کردن</span><span class="close-search"><i
                     class="icon-cross"></i></span></div>
