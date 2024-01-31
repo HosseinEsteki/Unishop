@@ -22,7 +22,7 @@ class Menu extends Component
      */
     public function render(): View|Closure|string
     {
-        $menus = ConvertToArray::menusToArray(\App\Models\Menu::with('category')->get());
+        $menus = ConvertToArray::menusToArray(\App\Models\Menu::with('category')->orderBy('priority')->get());
         return view('components.menu', compact('menus'));
     }
 }
