@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Http\Classes\Enums\DefaultPhoto;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -49,6 +50,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    #region Attributes
+    public function profileImage(): Attribute
+    {
+        return Attribute::make(function () {
+            return $this->photo->getUrl('user');
+        });
+    }
+    #endregion
 
     #region Relations
     public function photo(): BelongsTo

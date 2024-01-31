@@ -60,24 +60,29 @@
         <div class="inner">
             <div class="tools">
                 <div class="search"><i class="icon-search"></i></div>
-                <div class="account"><a href="account-orders.html"></a><i class="icon-head"></i>
+                <div class="account"><a href="{{route('account.orders.index')}}"></a><i class="icon-head"></i>
                     <ul class="toolbar-dropdown">
-                        <li class="sub-menu-user">
-                            <div class="user-ava"><img src="/unishop-theme/img/account/user-ava-sm.jpg"
-                                                       alt="Daniel Adams">
-                            </div>
-                            <div class="user-info">
-                                <h6 class="user-name">محمد شجاع</h6><span
-                                    class="text-xs text-muted">290 خرید ثبت شده</span>
-                            </div>
-                        </li>
-                        <li><a href="account-profile.html">مشخصات من</a></li>
-                        <li><a href="account-orders.html">لیست سفارشات</a></li>
-                        <li><a href="account-wishlist.html">علاقه مندیها</a></li>
-                        <li class="sub-menu-separator"></li>
-                        <li><a href="#" data-toggle="modal" data-target="#modalLogin"><i class="icon-unlock"></i>جعبه
-                                ورود</a></li>
-                        <li><a href="#"> <i class="icon-unlock"></i>خروج</a></li>
+                        @auth
+                            <li class="sub-menu-user">
+                                <div class="user-ava"><img src="{{$user->profileImage}}"
+                                                           alt="{{$user->name}}">
+                                </div>
+                                <div class="user-info">
+                                    <h6 class="user-name">{{$user->name}}</h6><span
+                                        class="text-xs text-muted">{{$user->orders->count()}} خرید ثبت شده</span>
+                                </div>
+                            </li>
+                            <li><a href="{{route('account.profile')}}">مشخصات من</a></li>
+                            <li><a href="{{route('account.orders.index')}}">لیست سفارشات</a></li>
+                            <li><a href="{{route('account.wishlist.index')}}">علاقه مندیها</a></li>
+                            <li class="sub-menu-separator"></li>
+                        @else
+                            <li><a href="#" data-toggle="modal" data-target="#modalLogin"><i class="icon-unlock"></i>جعبه
+                                    ورود</a></li>
+                        @endauth
+                        @auth
+                            <li><a href="{{route('logout')}}"> <i class="icon-unlock"></i>خروج</a></li>
+                        @endauth
                     </ul>
                 </div>
                 <div class="cart"><a href="cart.html"></a><i class="icon-bag"></i><span class="count">3</span><span

@@ -15,6 +15,15 @@ class Photo extends Model
         'alt'
     ];
 
+    #region functions
+    public function getUrl(string $model)
+    {
+        //TODO: It Should Be Change
+        $address = "/img/{$model}/{$this->id}.jpg";
+        return $address;
+    }
+    #endregion
+
     #region Relations
     public function category(): HasOne
     {
