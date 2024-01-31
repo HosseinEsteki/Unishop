@@ -35,12 +35,20 @@ class Product extends Model
             },
         );
     }
+
+    public function photo(): Attribute
+    {
+        return Attribute::make(function () {
+            return $this->photos->first()->getUrl('product');
+        });
+    }
     #endregion
     #region Relations
     public function rates(): HasMany
     {
         return $this->hasMany(Rate::class);
     }
+
     public function views(): HasMany
     {
         return $this->hasMany(View::class);
