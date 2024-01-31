@@ -29,7 +29,7 @@ class Cart extends Model
 //            $cart->user_id=Auth::id();
             if (($c = Cart::where('user_id', $cart->user_id)->where('product_id', $cart->product_id)->first()) != null) {
                 $c->amount += $cart->amount;
-                if (Product::with('productDetail')->find($c->product_id)->productDetail->amount < $c->amount) {
+                if (Product::find($c->product_id)->amount < $c->amount) {
                     \session(['errors' => Errors::OutOFProductAmount]);
                     return false;
                 }
