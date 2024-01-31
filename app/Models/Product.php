@@ -17,9 +17,11 @@ class Product extends Model
     protected $fillable = [
         'title',
         'name',
+        'slug',
         'short_description',
         'description',
-        'address'
+        'price',
+        'amount'
     ];
 
     #region Attributes
@@ -55,11 +57,6 @@ class Product extends Model
     public function photos(): BelongsToMany
     {
         return $this->belongsToMany(Photo::class);
-    }
-
-    public function productDetail(): HasOne
-    {
-        return $this->hasOne(ProductDetail::class);
     }
 
     public function wishLists(): HasMany

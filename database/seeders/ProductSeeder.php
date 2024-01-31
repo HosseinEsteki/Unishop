@@ -12,7 +12,6 @@ use App\Models\Order;
 use App\Models\OrderProduct;
 use App\Models\Photo;
 use App\Models\Product;
-use App\Models\ProductDetail;
 use App\Models\Rate;
 use App\Models\Tag;
 use App\Models\Ticket;
@@ -32,7 +31,6 @@ class ProductSeeder extends Seeder
     {
         $tags = Tag::factory(30)->create();
         $products = Product::factory(10)->
-        has(ProductDetail::factory())->
         hasAttached($tags->random(5))->
         hasAttached(Photo::factory(2))->
         create();
