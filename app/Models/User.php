@@ -58,6 +58,18 @@ class User extends Authenticatable
             return $this->photo->getUrl('user');
         });
     }
+
+    public function cartsPrice(): Attribute
+    {
+        return Attribute::make(function () {
+            $carts = $this->carts;
+            $sum = 0;
+            foreach ($carts as $cart) {
+                $sum += $cart->product->price;
+            }
+            return $sum;
+        });
+    }
     #endregion
 
     #region Relations
@@ -95,6 +107,11 @@ class User extends Authenticatable
     public function addresses(): HasMany
     {
         return $this->hasMany(UserAddress::class);
+    }
+
+    public function carts(): HasMany
+    {
+        return $this->hasMany(Cart::class);
     }
 
     #endregion
