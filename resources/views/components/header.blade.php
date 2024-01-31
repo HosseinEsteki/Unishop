@@ -17,44 +17,7 @@
         </div>
     </div>
     <!-- Main Navigation-->
-    <nav class="site-menu">
-        <ul>
-            @foreach($menus as $menu)
-                <li>
-                    @if($menu['category_id'])
-                        <a href="{{route('categories.show',['category'=>$menu['category']['slug']])}}"><span>{{$menu['category']['name']}}</span></a>
-                    @else
-                        <a href="{{$menu['page_url']}}"><span>{{$menu['page_name']}}</span></a>
-                    @endif
-                    @if($menu['items'])
-                        <ul class="sub-menu">
-                            @foreach($menu['items'] as $item)
-                                <li class="@if($item['items'])has-children @endif">
-                                    @if($item['category_id'])
-                                        <a href="{{route('categories.show',['category'=>$item['category']['slug']])}}"><span>{{$item['category']['name']}}</span></a>
-                                    @else
-                                        <a href="{{$item['page_url']}}"><span>{{$item['page_name']}}</span></a>
-                                    @endif
-                                    @if($item['items'])
-                                        <ul class="sub-menu">
-                                            @foreach($item['items'] as $child) @endforeach
-                                            <li>
-                                                @if($child['category_id'])
-                                                    <a href="{{route('categories.show',['category'=>$child['category']['slug']])}}">{{$child['category']['name']}}</a>
-                                                @else
-                                                    <a href="{{$child['page_url']}}"><span>{{$child['page_name']}}</span></a>
-                                                @endif
-                                            </li>
-                                        </ul>
-                                    @endif
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                </li>
-            @endforeach
-        </ul>
-    </nav>
+    <x-menu/>
     <!-- Toolbar-->
     <div class="toolbar">
         <div class="inner">
@@ -85,41 +48,7 @@
                         @endauth
                     </ul>
                 </div>
-                <div class="cart"><a href="{{route('cart.index')}}"></a><i class="icon-bag"></i><span
-                        class="count">{{$user->carts->count()}}</span><span
-                        class="subtotal">{{$user->cartsPrice}} تومان</span>
-                    <div class="toolbar-dropdown">
-                        @foreach($user->carts as $cart)
-                            @php
-                                $product=$cart->product;
-                                $pageAddress=route('products.show',['product'=>$cart->product->slug])
-                            @endphp
-                            <div class="dropdown-product-item">
-                            <span class="dropdown-product-remove">
-                                <i class="icon-cross"></i>
-                            </span>
-
-                                <a class="dropdown-product-thumb" href="{{$pageAddress}}">
-                                    <img src="{{$product->photo}}" alt="Product">
-                                </a>
-                                <div class="dropdown-product-info">
-                                    <a class="dropdown-product-title"
-                                       href="{{$pageAddress}}">{{$product->name}}</a>
-                                    <span class="dropdown-product-details">{{$product->price}} تومان</span>
-                                    <span class="dropdown-product-details"> - {{$cart->amount}}</span>
-                                </div>
-                            </div>
-                        @endforeach
-
-                        <div class="toolbar-dropdown-group">
-                            <div class="column"><a class="btn btn-sm btn-block btn-secondary"
-                                                   href="{{route('cart.index')}}">نمایش
-                                    سبد</a></div>
-                            <div class="column"><a class="btn btn-sm btn-block btn-success"
-                                                   href="{{route('account.orders.create')}}">تسویه</a></div>
-                        </div>
-                    </div>
-                </div>
+                <x-cart/>
             </div>
         </div>
     </div>

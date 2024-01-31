@@ -3,13 +3,11 @@
 namespace App\View\Components;
 
 use App\Http\Classes\ConvertToArray;
-use App\Models\Menu;
 use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Header extends Component
+class Menu extends Component
 {
     /**
      * Create a new component instance.
@@ -24,7 +22,7 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        $user = Auth::user();
-        return view('components.header', compact('user'));
+        $menus = ConvertToArray::menusToArray(\App\Models\Menu::with('category')->get());
+        return view('components.menu', compact('menus'));
     }
 }

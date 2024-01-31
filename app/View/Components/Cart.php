@@ -2,14 +2,12 @@
 
 namespace App\View\Components;
 
-use App\Http\Classes\ConvertToArray;
-use App\Models\Menu;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Header extends Component
+class Cart extends Component
 {
     /**
      * Create a new component instance.
@@ -25,6 +23,6 @@ class Header extends Component
     public function render(): View|Closure|string
     {
         $user = Auth::user();
-        return view('components.header', compact('user'));
+        return view('components.cart', compact('user'));
     }
 }
