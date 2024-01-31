@@ -6,39 +6,30 @@ use Illuminate\Database\Eloquent\Collection;
 
 class ConvertToArray
 {
-    public static function categoriesToArray(Collection $categories): array
+    public static function categoriesToArray(Collection $categories): ?array
     {
-        $newArray = [];
-        $parents = $categories->where('parent', '=', null);
-        $children = $categories->where('parent', '!=', null);
-        foreach ($parents as $parent) {
-            $newArray[] = [
-                'id' => $parent->id,
-                'name' => $parent->name,
-                'slug' => $parent->address,
-                'photo_id' => $parent->photo_id,
-                'items' => $children->where('parent', '=', $parent->id)->except(['parent'])->toArray()
-            ];
-        }
-        return $newArray;
+        return self::ConvertBase($categories);
     }
 
-    public static function menusToArray(Collection $menus)
+    public static function menusToArray(Collection $menus): ?array
     {
-        $newArray = [];
-        $parents = $menus->where('parent', '=', null);
-        $children = $menus->where('parent', '!=', null);
-        foreach ($parents as $parent) {
-            $newArray[] = [
-                'id' => $parent->id,
-                'priority' => $parent->priority,
-                'category_id' => $parent->category_id,
-                'category' => $parent->category,
-                'page_name' => $parent->page_name,
-                'page_url' => $parent->page_url,
-                'items' => $children->where('parent', '=', $parent->id)->except(['parent'])->toArray()
-            ];
+        return self::ConvertBase($menus);
+    }
+
+    private static function ConvertBase(Collection $collection, int $parent = null): ?array
+    {
+        $items = $collection->where('parent', '=', $parent);
+        $arr = [];
+        if ($collection->count() == 0) {
+            return null;
         }
-        return $newArray;
+        foreach ($items as $item) {
+            $id = $item->id;
+            $collection->where('id', '!=', $id);
+            $arr[] = [
+                    'items' => self::ConvertBase($collection, $id)
+                ] + $collection->where('id', '=', $id)->first()->toArray();
+        }
+        return $arr;
     }
 }
