@@ -2,9 +2,9 @@
 <div class="offcanvas-container" id="shop-categories">
     <a class="account-link" href="@auth{{route('account.profile')}}@else # @endauth">
         @auth
-            <div class="user-ava"><img src="{{$user->profilePhoto}}" alt="{{$user->name}}"></div>
+            <div class="user-ava"><img src="{{$user->profileImage}}" alt="{{$user->name}}"></div>
             <div class="user-info">
-                <h6 class="user-name">محمد شجاع</h6><span class="text-sm text-white opacity-60">290 خرید ثبت شده</span>
+                <h6 class="user-name">{{$user->name}}</h6><span class="text-sm text-white opacity-60">{{$user->orders->count()}} خرید ثبت شده</span>
             </div>
         @endauth
     </a>
