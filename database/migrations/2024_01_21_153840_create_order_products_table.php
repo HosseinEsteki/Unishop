@@ -13,7 +13,8 @@ return new class extends Migration {
         Schema::create('order_products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained()->cascadeOnDelete();
-            $table->string('product');
+            $table->foreignId('product_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('product_name');
             $table->unsignedBigInteger('price');
             $table->integer('amount')->default('1');
             $table->timestamps();

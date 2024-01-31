@@ -17,11 +17,12 @@ class OrderProductFactory extends Factory
      */
     public function definition(): array
     {
-        $product = Product::with('productDetail')->get()->random();
+        $product = Product::all()->random();
         return [
-            'product' => $product->title,
-            'price' => $product->productDetail->price,
-            'amount' => $product->productDetail->amount
+            'product_id' => $product->id,
+            'product_name' => $product->name,
+            'price' => $product->price,
+            'amount' => $product->amount
         ];
     }
 }
