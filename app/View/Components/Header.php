@@ -24,7 +24,6 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        $user = Auth::user();
-        return view('components.header', compact('user'));
+        return view('components.header');
     }
 }
