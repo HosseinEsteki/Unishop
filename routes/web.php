@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     \Illuminate\Support\Facades\Auth::loginUsingId(2);
     return view('layouts.app');
-});
+})->name('home');
 
 Route::group(['prefix' => 'account', 'as' => 'account.'], function () {
     Route::resource('orders', \App\Http\Controllers\Account\OrderController::class);
