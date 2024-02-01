@@ -9,12 +9,13 @@ class PageSeeder extends Seeder
 {
     public function run(): void
     {
+        Page::insert([
+            'name' => 'خانه',
+            'route' => 'home',
+            'parent' => null
+        ]);
         $pages = [
             [
-                'name' => 'خانه',
-                'route' => 'home',
-                'parent' => null
-            ], [
                 'name' => 'درباره ما',
                 'route' => 'about-us',
             ], [
