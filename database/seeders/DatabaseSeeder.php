@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             TopBarSeeder::class,
             SettingSeeder::class,
             MenuSeeder::class,
+            PageSeeder::class
         ]);
     }
 
