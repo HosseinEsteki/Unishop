@@ -20,12 +20,8 @@ class ConvertToArray
     {
         $items = $collection->where('parent', '=', $parent);
         $arr = [];
-        if ($collection->count() == 0) {
-            return null;
-        }
         foreach ($items as $item) {
             $id = $item->id;
-            $collection->where('id', '!=', $id);
             $arr[] = [
                     'items' => self::ConvertBase($collection, $id)
                 ] + $collection->where('id', '=', $id)->first()->toArray();
