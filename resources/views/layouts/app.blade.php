@@ -38,7 +38,7 @@
 <!-- Off-Canvas Wrapper-->
 <div class="offcanvas-wrapper bg-dark bg-white">
     <!-- Page Title-->
-    <x-page-title></x-page-title>
+    <x-breadcrumbs></x-breadcrumbs>
     <!-- Page Content-->
     <div class="container padding-bottom-2x padding-top-2x mb-2 ">
         @yield('content')
