@@ -2,11 +2,14 @@
 
 namespace App\View\Components;
 
+use App\Http\Classes\Breadcrumbs as Crumbs;
+use App\Http\Classes\ConvertToArray;
+use App\Models\Page;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class PageTitle extends Component
+class Breadcrumbs extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +24,9 @@ class PageTitle extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.page-title');
+        $route = \Route::getCurrentRoute()->getName();
+        $page = Page::whereRoute($route)->first();
+        $breadcrumbs = Crumbs::Breadcrumbs($page);
+        return view('components.breadcrumbs', compact('page', 'breadcrumbs'));
     }
 }

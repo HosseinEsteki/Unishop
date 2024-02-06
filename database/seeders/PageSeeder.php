@@ -12,15 +12,17 @@ class PageSeeder extends Seeder
         Page::insert([
             'name' => 'خانه',
             'route' => 'home',
-            'parent' => null
+            'parent' => 2
         ]);
         $pages = [
             [
                 'name' => 'درباره ما',
                 'route' => 'about-us',
+                'parent' => 3
             ], [
                 'name' => 'تماس با ما',
                 'route' => 'contact-us',
+                'parent' => null
             ]
         ];
 
