@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Settings\SiteApp;
 use App\Models\Settings\SocialMedia;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -23,6 +24,7 @@ class Footer extends Component
     public function render(): View|Closure|string
     {
         $socialMedias = SocialMedia::all();
-        return view('components.footer', compact('socialMedias'));
+        $siteApps = SiteApp::all();
+        return view('components.footer', compact('socialMedias', 'siteApps'));
     }
 }
