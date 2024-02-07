@@ -33,4 +33,8 @@ Route::resource('faqs', \App\Http\Controllers\FaqController::class, ['only' => [
 Route::resource('products', \App\Http\Controllers\ProductController::class, ['only' => ['index', 'show']]);
 Route::resource('categories', \App\Http\Controllers\CategoryController::class, ['only' => ['index', 'show']]);
 Route::resource('cart', \App\Http\Controllers\CartController::class, ['only' => ['index', 'store', 'destroy']]);
+
+Route::get('transportation', [\App\Http\Controllers\TransportationController::class, 'index'])->name('transportation');
+Route::resource('subscribe', \App\Http\Controllers\SubscribeController::class,)->only(['index', 'store']);
+
 include_once 'auth.php';
