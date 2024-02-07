@@ -22,28 +22,26 @@ class SettingSeeder extends Seeder
                 'name' => 'storeName',
                 'value' => 'یونی شاپ'
             ], [
-                'name' => 'owner',
-                'value' => 'حسین استکی'
-            ], [
                 'name' => 'phone',
                 'value' => '09369783378'
             ], [
                 'name' => 'mail',
                 'value' => 'hosseinesteki77@gmail.com'
             ], [
-                'name' => 'creator url',
+                'name' => 'payment methods',
+                'value' => '/unishop-theme/img/payment_methods.png'
+            ],
+
+
+            [
+                'name' => 'developer url',
                 'value' => 'https://hosseinesteki.ir'
             ], [
-                'name' => 'creator description',
+                'name' => 'developer description',
                 'value' => 'توسعه توسط حسین استکی'
             ], [
-                'name' => '',
-                'value' => ''
-            ], [
-                'name' => '',
-                'value' => ''
-            ], [
-
+                'name' => 'developer',
+                'value' => 'حسین استکی'
             ]
         ];
 
