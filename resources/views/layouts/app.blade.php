@@ -11,6 +11,7 @@
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Favicon and Apple Icons-->
+    <link rel="stylesheet" href="/unishop-theme/css/app.css">
     {{--    <link rel="icon" type="image/x-icon" href="favicon.ico">--}}
     {{--    <link rel="icon" type="image/png" href="favicon.png">--}}
     {{--    <link rel="apple-touch-icon" href="touch-icon-iphone.png">--}}
