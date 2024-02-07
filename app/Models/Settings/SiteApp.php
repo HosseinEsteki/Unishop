@@ -3,6 +3,7 @@
 namespace App\Models\Settings;
 
 use App\Models\Photo;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -19,6 +20,12 @@ class SiteApp extends Model
         'priority' => 0
     ];
 
+    public function image(): Attribute
+    {
+        return Attribute::make(function () {
+            return $this->photo->getUrl('site-app');
+        });
+    }
     #region Relations
     public function photo(): BelongsTo
     {
