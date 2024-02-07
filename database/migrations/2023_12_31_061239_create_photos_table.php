@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('alt');
+            $table->string('alt')->nullable();
             $table->timestamps();
         });
     }

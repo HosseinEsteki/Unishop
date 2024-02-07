@@ -11,8 +11,8 @@ class Photo extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'alt'
+    protected $attributes = [
+        'alt' => null
     ];
 
     #region functions
