@@ -13,6 +13,7 @@ class SettingSeeder extends Seeder
      */
     public function run(): void
     {
+        Setting::truncate();
         $settings = [
             [
                 'name' => 'logoAddress',
@@ -20,7 +21,30 @@ class SettingSeeder extends Seeder
             ], [
                 'name' => 'storeName',
                 'value' => 'یونی شاپ'
-            ],
+            ], [
+                'name' => 'owner',
+                'value' => 'حسین استکی'
+            ], [
+                'name' => 'phone',
+                'value' => '09369783378'
+            ], [
+                'name' => 'mail',
+                'value' => 'hosseinesteki77@gmail.com'
+            ], [
+                'name' => 'creator url',
+                'value' => 'https://hosseinesteki.ir'
+            ], [
+                'name' => 'creator description',
+                'value' => 'توسعه توسط حسین استکی'
+            ], [
+                'name' => '',
+                'value' => ''
+            ], [
+                'name' => '',
+                'value' => ''
+            ], [
+
+            ]
         ];
 
         Setting::insert($settings);

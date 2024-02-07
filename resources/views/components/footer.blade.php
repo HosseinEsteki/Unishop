@@ -5,26 +5,29 @@
                 <!-- Contact Info-->
                 <section class="widget widget-light-skin">
                     <h3 class="widget-title">ارتباط با ما</h3>
-                    <p class="text-white">تلفن (محمد شجاع ) : 1323 - 350 - 0935</p>
-                    <p class="text-white">ایمیل : mohammadshoja65@gmail.com</p>
-                    <p class="text-white">وبسایت : <a class="navi-link-light" href="http://moderniz.ir">http://moderniz.ir</a>
+                    <p class="text-white">تلفن ({{Setting::getValue('owner')}} ) : <a class="navi-link-light"
+                                                                                      href="tel:{{Setting::getValue('phone')}}">{{Setting::getValue('phone')}}</a>
                     </p>
-                    <p><a class="navi-link-light" href="http://moderniz.ir">توسعه و ترجمه تیم نرم افزاری مدرنیز</a>
+                    <p class="text-white">ایمیل : <a class="navi-link-light"
+                                                     href="mailto:{{Setting::getValue('mail')}}"> {{Setting::getValue('mail')}}</a>
                     </p>
-                    <a class="social-button shape-circle sb-facebook sb-light-skin" href="#"><i
-                            class="socicon-facebook"></i></a>
-                    <a class="social-button shape-circle sb-twitter sb-light-skin" href="#"><i
-                            class="socicon-twitter"></i></a>
-                    <a class="social-button shape-circle sb-instagram sb-light-skin" href="#"><i
-                            class="socicon-instagram"></i></a>
-                    <a class="social-button shape-circle sb-google-plus sb-light-skin" href="#"><i
-                            class="socicon-googleplus"></i></a>
+                    <p class="text-white">وبسایت : <a class="navi-link-light"
+                                                      href="{{Setting::getValue(('creator url'))}}">{{Setting::getValue(('creator url'))}}</a>
+                    </p>
+                    <p><a class="navi-link-light"
+                          href="{{Setting::getValue('creator url')}}">{{Setting::getValue('creator description')}}</a>
+                    </p>
+                    @foreach($socialMedias as $socialMedia)
+                        <a class="social-button shape-circle sb-{{$socialMedia->name}} sb-light-skin"
+                           href="{{$socialMedia->address}}"><i
+                                class="{{$socialMedia->icon}}"></i></a>
+                    @endforeach
                 </section>
             </div>
             <div class="col-lg-3 col-md-6">
                 <!-- Mobile App Buttons-->
                 <section class="widget widget-light-skin">
-                    <h3 class="widget-title">دکمه های مارکت موبایل</h3>
+                    <h3 class="widget-title">دکمه‌های مارکت موبایل</h3>
                     <a class="market-button apple-button mb-light-skin" href="#">
                         <span class="mb-subtitle">دانلود از مارکت</span>
                         <span class="mb-title">اپ استور</span>
