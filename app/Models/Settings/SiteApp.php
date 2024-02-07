@@ -6,7 +6,7 @@ use App\Models\Photo;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class MarketMobile extends Model
+class SiteApp extends Model
 {
     public $timestamps = false;
 

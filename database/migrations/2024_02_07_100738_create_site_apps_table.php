@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::create('market_mobiles', function (Blueprint $table) {
+        Schema::create('site_apps', function (Blueprint $table) {
             $table->id();
             $table->unsignedSmallInteger('priority')->default(0);
             $table->string('name');

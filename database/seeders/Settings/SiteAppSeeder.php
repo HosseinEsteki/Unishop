@@ -3,10 +3,10 @@
 namespace Database\Seeders\Settings;
 
 use App\Models\Photo;
-use App\Models\Settings\MarketMobile;
+use App\Models\Settings\SiteApp;
 use Illuminate\Database\Seeder;
 
-class MarketMobileSeeder extends Seeder
+class SiteAppSeeder extends Seeder
 {
     public function run(): void
     {
@@ -31,6 +31,6 @@ class MarketMobileSeeder extends Seeder
                 'photo_id' => $photoWindowsStore->id
             ],
         ];
-        MarketMobile::insert($markets);
+        SiteApp::insert($markets);
     }
 }
