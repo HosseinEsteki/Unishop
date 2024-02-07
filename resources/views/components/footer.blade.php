@@ -88,12 +88,12 @@
 
                         <button class="btn btn-primary" type="submit"><i class="icon-check"></i></button>
                     </div>
-                    <span class="form-text text-sm text-white opacity-50 text-right">برای عضویت در خبرنامه , دریافت تخفیف ها , آخرین اخبار ، و فروش های ویژه </span>
+                    <span class="form-text text-sm text-white opacity-50 text-right">برای عضویت در خبرنامه، دریافت تخفیف‌ها، آخرین اخبار، و فروش‌های ویژه </span>
                 </form>
             </div>
         </div>
         <!-- Copyright-->
-        <p class="footer-copyright text-right">© کلیه حقوق محفوظ است, ایجاد شده توسط &nbsp;<i
+        <p class="footer-copyright text-right">© کلیه حقوق محفوظ است. ایجاد شده توسط &nbsp;<i
                 class="icon-heart text-danger"></i><a href="{{Setting::getValue('developer url')}}"
                                                       target="_blank"> {{Setting::getValue('developer')}}</a>
         </p>
