@@ -16,9 +16,7 @@ class SiteApp extends Model
         'link',
         'photo_id',
     ];
-    protected $attributes = [
-        'priority' => 0
-    ];
+    protected $attributes = ['priority' => 0];
 
     public function image(): Attribute
     {
@@ -26,10 +24,11 @@ class SiteApp extends Model
             return $this->photo->getUrl('site-app');
         });
     }
-    #region Relations
+
+    #Region Relations
     public function photo(): BelongsTo
     {
         return $this->belongsTo(Photo::class);
     }
-    #endregion
+    #endRegion
 }

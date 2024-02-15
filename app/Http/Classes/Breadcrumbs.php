@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Collection;
 
 class Breadcrumbs
 {
-
     public static function Breadcrumbs(Page $page): array
     {
         $pages = Page::all();
@@ -34,9 +33,8 @@ class Breadcrumbs
 
     private static function makeTree(Collection $collection, $page, $array = null): ?array
     {
-        if ($page["parent"] == null) {
+        if ($page["parent"] == null)
             return $page;
-        }
         $parent = $collection->where('id', '=', $page["parent"])->first()->toArray();
         $holder = self::makeTree($collection, $parent, $array);
         $array[] = ['children' => $parent + $holder];

@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TopBar extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'title',
         'type',
@@ -22,7 +20,7 @@ class TopBar extends Model
         'icon' => null
     ];
 
-    #region Attributes
+    #Region Attributes
     public function socialMedia(): Attribute
     {
         return Attribute::make(
@@ -32,4 +30,5 @@ class TopBar extends Model
             }
         );
     }
+    #endRegion
 }
