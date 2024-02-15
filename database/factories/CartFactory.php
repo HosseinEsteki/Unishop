@@ -22,6 +22,7 @@ class CartFactory extends Factory
         $userIds = User::all('id');
         $product = Product::all()->random();
         return [
+            'ip_address' => $this->faker->ipv4,
             'user_id' => $userIds->random(),
             'product_id' => $product->id,
             'amount' => $product->amount

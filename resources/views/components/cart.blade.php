@@ -1,8 +1,9 @@
 <div class="cart"><a href="{{route('cart.index')}}"></a><i class="icon-bag"></i><span
-        class="count">{{$user->carts->count()}}</span><span
-        class="subtotal">{{$user->cartsPrice}} تومان</span>
+        class="count">{{$carts->count()}}</span><span
+        class="subtotal">{{$cartsPrice}} تومان</span>
     <div class="toolbar-dropdown">
-        @foreach($user->carts as $cart)
+        @if($carts) @endif
+        @foreach($carts as $cart)
             @php
                 $product=$cart->product;
                 $pageAddress=route('products.show',['product'=>$cart->product->slug])

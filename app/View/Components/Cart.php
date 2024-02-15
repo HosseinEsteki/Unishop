@@ -17,12 +17,15 @@ class Cart extends Component
         //
     }
 
+
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
         $user = Auth::user();
-        return view('components.cart', compact('user'));
+        $carts = \App\Models\Cart::getCurrentCarts();
+        $cartsPrice = \App\Models\Cart::cartsPrice($carts);
+        return view('components.cart', compact('user', 'carts', 'cartsPrice'));
     }
 }

@@ -59,17 +59,6 @@ class User extends Authenticatable
         });
     }
 
-    public function cartsPrice(): Attribute
-    {
-        return Attribute::make(function () {
-            $carts = $this->carts;
-            $sum = 0;
-            foreach ($carts as $cart) {
-                $sum += $cart->product->price;
-            }
-            return $sum;
-        });
-    }
     #endregion
 
     #region Relations
