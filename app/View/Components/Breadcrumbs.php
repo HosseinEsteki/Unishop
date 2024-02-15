@@ -26,7 +26,7 @@ class Breadcrumbs extends Component
     {
         $route = \Route::getCurrentRoute()->getName();
         $page = Page::whereRoute($route)->first();
-        $breadcrumbs = Crumbs::Breadcrumbs($page);
+        $breadcrumbs = $page ? Crumbs::Breadcrumbs($page) : null;
         return view('components.breadcrumbs', compact('page', 'breadcrumbs'));
     }
 }

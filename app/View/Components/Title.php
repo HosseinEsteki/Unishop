@@ -11,7 +11,9 @@ class Title extends Component
     public function render(): View
     {
         $route = \Route::getCurrentRoute()->getName();
-        $pageName = Page::whereRoute($route)->first('name')->name;
+        $page = Page::whereRoute($route)->first('name');
+
+        $pageName = $page ? Page::whereRoute($route)->first('name')->name : null;
         return view('components.title', compact('pageName'));
     }
 }
