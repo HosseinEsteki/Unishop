@@ -11,21 +11,6 @@
     <nav class="offcanvas-menu">
         <ul class="menu">
             {!! $menuString !!}
-            {{--            @foreach($categories as $category)--}}
-            {{--                <li class="@isset($category['items']) has-children @endisset">--}}
-            {{--                    <span>--}}
-            {{--                        <a href="#">{{$category['name']}}</a>--}}
-            {{--                        <span class="sub-menu-toggle"></span>--}}
-            {{--                    </span>--}}
-            {{--                    @isset($category['items'])--}}
-            {{--                        <ul class="offcanvas-submenu">--}}
-            {{--                            @foreach($category['items'] as $item)--}}
-            {{--                                <li><a href="#">{{$item['name']}}</a></li>--}}
-            {{--                            @endforeach--}}
-            {{--                        </ul>--}}
-            {{--                    @endisset--}}
-            {{--                </li>--}}
-            {{--            @endforeach--}}
         </ul>
     </nav>
 </div>
