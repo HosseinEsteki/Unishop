@@ -1,13 +1,15 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Menu;
 
 use App\Http\Classes\ConvertToArray;
+use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Menu extends Component
+class Side extends Component
 {
     /**
      * Create a new component instance.
@@ -22,7 +24,8 @@ class Menu extends Component
      */
     public function render(): View|Closure|string
     {
-        $menus = ConvertToArray::menusToArray(\App\Models\Menu::with('category')->orderBy('priority')->get());
-        return view('components.menu', compact('menus'));
+        $categories = ConvertToArray::categoriesToArray(Category::all());
+        $user = Auth::user();
+        return view('components.menu.side', compact('categories', 'user'));
     }
 }

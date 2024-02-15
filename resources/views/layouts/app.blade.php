@@ -25,8 +25,8 @@
 <!-- Body-->
 <body>
 @include('layouts.partials.modals')
-<x-off-canvas.category-menu/>
-<x-off-canvas.mobile-menu/>
+<x-menu.side/>
+<x-menu.mobile/>
 <x-top-bar/>
 <!-- Navbar-->
 <x-header/>

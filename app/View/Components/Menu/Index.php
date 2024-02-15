@@ -1,15 +1,13 @@
 <?php
 
-namespace App\View\Components\OffCanvas;
+namespace App\View\Components\Menu;
 
 use App\Http\Classes\ConvertToArray;
-use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class CategoryMenu extends Component
+class Index extends Component
 {
     /**
      * Create a new component instance.
@@ -24,8 +22,7 @@ class CategoryMenu extends Component
      */
     public function render(): View|Closure|string
     {
-        $categories = ConvertToArray::categoriesToArray(Category::all());
-        $user = Auth::user();
-        return view('components.off-canvas.category-menu', compact('categories', 'user'));
+        $menus = ConvertToArray::menusToArray(\App\Models\Menu::with('category')->orderBy('priority')->get());
+        return view('components.menu.index', compact('menus'));
     }
 }

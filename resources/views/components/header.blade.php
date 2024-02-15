@@ -17,7 +17,7 @@
         </div>
     </div>
     <!-- Main Navigation-->
-    <x-menu/>
+    <x-menu.index/>
     <!-- Toolbar-->
     <div class="toolbar">
         <div class="inner">
