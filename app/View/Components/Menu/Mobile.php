@@ -28,10 +28,10 @@ class Mobile extends Component
             $menuString .= '<li class="' . $class . '">';
             $menuString .= '<span>';
             if (isset($menu['category_id'])) {
-                $href = $hasItems ? '#' : route('categories.show', ['category' => $menu['category']['slug']]);
+                $href = route('categories.show', ['category' => $menu['category']['slug']]);
                 $title = $menu['category']['name'];
             } else {
-                $href = $hasItems ? '#' : $menu['page_url'];
+                $href = $menu['page_url'];
                 $title = $menu['page_name'];
             }
             $menuString .= '<a href="' . $href . '">' . $title . '</a>';
