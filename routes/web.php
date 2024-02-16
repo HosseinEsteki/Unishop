@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('layouts.app');
 })->name('home');
 
-Route::group(['prefix' => 'account', 'as' => 'account.'], function () {
+Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
     Route::resource('orders', \App\Http\Controllers\Account\OrderController::class);
     Route::resource('wishlist', \App\Http\Controllers\Account\WishListController::class, ['only' => ['index', 'show', 'store', 'destroy']]);
     Route::get('profile', [\App\Http\Controllers\Account\ProfileController::class, 'index'])->name('profile');

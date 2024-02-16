@@ -29,7 +29,7 @@
                                    href="{{route('cart.index')}}">نمایش
                     سبد</a></div>
             <div class="column"><a class="btn btn-sm btn-block btn-success"
-                                   href="{{route('account.orders.create')}}">تسویه</a></div>
+                                   href="{{route('dashboard.orders.create')}}">تسویه</a></div>
         </div>
     </div>
 </div>

@@ -57,8 +57,8 @@
                 <section class="widget widget-links widget-light-skin">
                     <h3 class="widget-title">مشخصات حساب و دسترسی شما</h3>
                     <ul>
-                        <li><a href="{{route('account.profile')}}">پروفایل من</a></li>
-                        <li><a href="{{route('account.orders.index')}}">سفارشات من</a></li>
+                        <li><a href="{{route('dashboard.profile')}}">پروفایل من</a></li>
+                        <li><a href="{{route('dashboard.orders.index')}}">سفارشات من</a></li>
                         <li><a href="{{route('transportation')}}">درباره حمل و نقل</a></li>
                     </ul>
                 </section>
