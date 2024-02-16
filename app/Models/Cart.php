@@ -66,7 +66,7 @@ class Cart extends Model
     #region Bootable
 
 
-    private function amountCheck($cart): bool|Cart
+    private static function amountCheck($cart): bool|Cart
     {
         if (($c = Cart::where('user_id', $cart->user_id)->orWhere('ip_address', $cart->ip_address)->where('product_id', $cart->product_id)->first()) != null) {
             $c->amount += $cart->amount;
