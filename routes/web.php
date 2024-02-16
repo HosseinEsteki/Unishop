@@ -19,12 +19,12 @@ Route::get('/', function () {
 })->name('home');
 
 Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
-    Route::resource('orders', \App\Http\Controllers\Account\OrderController::class);
-    Route::resource('wishlist', \App\Http\Controllers\Account\WishListController::class, ['only' => ['index', 'show', 'store', 'destroy']]);
-    Route::get('profile', [\App\Http\Controllers\Account\ProfileController::class, 'index'])->name('profile');
-    Route::put('profile', [\App\Http\Controllers\Account\ProfileController::class, 'update'])->name('profile.update');
-    Route::resource('address', \App\Http\Controllers\Account\UserAddressController::class, ['only' => ['edit', 'update']]);
-    Route::resource('tickets', \App\Http\Controllers\Account\TicketController::class);
+    Route::resource('orders', \App\Http\Controllers\Dashboard\OrderController::class);
+    Route::resource('wishlist', \App\Http\Controllers\Dashboard\WishListController::class, ['only' => ['index', 'show', 'store', 'destroy']]);
+    Route::get('profile', [\App\Http\Controllers\Dashboard\ProfileController::class, 'index'])->name('profile');
+    Route::put('profile', [\App\Http\Controllers\Dashboard\ProfileController::class, 'update'])->name('profile.update');
+    Route::resource('address', \App\Http\Controllers\Dashboard\UserAddressController::class, ['only' => ['edit', 'update']]);
+    Route::resource('tickets', \App\Http\Controllers\Dashboard\TicketController::class);
 });
 Route::get('about-us', [\App\Http\Controllers\AboutController::class, 'index'])->name('about-us');
 Route::get('contact-us', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact-us');
