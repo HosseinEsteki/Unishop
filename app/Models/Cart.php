@@ -88,7 +88,7 @@ class Cart extends Model
             if (!isEmpty($userId = Auth::id())) {
                 $cart->user_id = $userId;
             }
-            $cart->ip_address = request()->ip();
+//            $cart->ip_address = request()->ip();
             $check = self::amountCheck($cart);
             if ($check === false) {
                 return false;
