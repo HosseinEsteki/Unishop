@@ -51,57 +51,8 @@
                 </div>
             </div>
         @endif
-        <hr>
+            @if(!$loop->last)
+                <hr>
+            @endif
     @endforeach
-    <div class="text-center padding-top-3x mb-30">
-        <h2>معرفی اعضای گروه</h2>
-        <p class="text-muted">افراد پشت تجربه خرید عالی شما.</p>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 mb-30 text-center"><img
-                class="d-block w-150 mx-auto img-thumbnail rounded-circle mb-2" src="img/team/01.jpg" alt="Team">
-            <h6>سارا نعمتی</h6>
-            <p class="text-muted mb-2">بنیانگذار، مدیر عامل شرکت</p>
-            <div class="social-bar"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip"
-                                       data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a
-                    class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Twitter"><i class="socicon-twitter"></i></a><a
-                    class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip"
-                    data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-30 text-center"><img
-                class="d-block w-150 mx-auto img-thumbnail rounded-circle mb-2" src="img/team/02.jpg" alt="Team">
-            <h6>تیلور جکسون</h6>
-            <p class="text-muted mb-2">مدیر مالی و حسابرسی</p>
-            <div class="social-bar"><a class="social-button shape-circle sb-skype" href="#" data-toggle="tooltip"
-                                       data-placement="top" title="Skype"><i class="socicon-skype"></i></a><a
-                    class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-paypal"
-                                                                            href="#" data-toggle="tooltip"
-                                                                            data-placement="top" title="PayPal"><i
-                        class="socicon-paypal"></i></a></div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-30 text-center"><img
-                class="d-block w-150 mx-auto img-thumbnail rounded-circle mb-2" src="img/team/03.jpg" alt="Team">
-            <h6>علیرضا بهرامی</h6>
-            <p class="text-muted mb-2">مدیر بازاریابی و توسعه</p>
-            <div class="social-bar"><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip"
-                                       data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a
-                    class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip"
-                    data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a><a
-                    class="social-button shape-circle sb-email" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Email"><i class="socicon-mail"></i></a></div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-30 text-center"><img
-                class="d-block w-150 mx-auto img-thumbnail rounded-circle mb-2" src="img/team/04.jpg" alt="Team">
-            <h6>مانا ضرابی پور</h6>
-            <p class="text-muted mb-2">طراح و مستند سازی</p>
-            <div class="social-bar"><a class="social-button shape-circle sb-behance" href="#" data-toggle="tooltip"
-                                       data-placement="top" title="Behance"><i class="socicon-behance"></i></a><a
-                    class="social-button shape-circle sb-dribbble" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Dribbble"><i class="socicon-dribbble"></i></a><a
-                    class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Instagram"><i class="socicon-instagram"></i></a></div>
-        </div>
-    </div>
 </div>
