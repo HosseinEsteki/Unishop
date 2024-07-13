@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('photo_product', function (Blueprint $table) {
             $table->foreignId('product_id')->constrained('products')->cascadeOnDelete();
             $table->foreignId('photo_id')->constrained('photos')->cascadeOnDelete();
+            $table->tinyInteger('priority')->default(0);
             $table->primary(['product_id', 'photo_id']);
         });
     }
