@@ -13,12 +13,14 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
+
         'title',
         'description',
         'product_id',
         'user_id'
     ];
     protected $attributes = [
+        'parent' => null,
         'status' => "Pending"
     ];
 

@@ -15,11 +15,14 @@ class PhotoSeeder extends Seeder
     {
         Photo::insert([
             [
-                'alt' => 'avatar'
+                'alt' => 'avatar',
+                'model' => 'User'
             ], [
-                'alt' => 'product'
+                'alt' => 'product',
+                'model' => 'Product'
             ], [
-                'alt' => 'category'
+                'alt' => 'category',
+                'model' => 'Category'
             ]
         ]);
     }

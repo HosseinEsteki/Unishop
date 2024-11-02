@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('title');
             $table->foreignId('photo_id')->constrained()->cascadeOnDelete();
             $table->longText('content');
-            $table->enum('link_type', EnumConvert::NamesToArray(LinkType::cases()));
+            $table->enum('link_type', EnumConvert::NamesToCollection(LinkType::cases())->all());
             $table->string('link_name')->nullable();
             $table->string('link_address')->nullable();
             $table->timestamps();

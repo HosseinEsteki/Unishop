@@ -55,7 +55,7 @@ class User extends Authenticatable
     public function profileImage(): Attribute
     {
         return Attribute::make(function () {
-            return $this->photo->getUrl('user');
+            return $this->photo->path;
         });
     }
 

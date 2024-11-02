@@ -12,6 +12,8 @@ return new class extends Migration {
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
+            $table->string('model');
+            $table->tinyInteger('priority')->default(0);
             $table->string('alt')->nullable();
             $table->timestamps();
         });

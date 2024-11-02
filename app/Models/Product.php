@@ -30,8 +30,7 @@ class Product extends Model
         return Attribute::make(
             get: function () {
                 $rates = $this->rates->pluck('amount');
-                $average = $rates->average();
-                return $average;
+                return $rates->average();
             },
         );
     }
@@ -39,7 +38,7 @@ class Product extends Model
     public function photo(): Attribute
     {
         return Attribute::make(function () {
-            return $this->photos->first()->getUrl('product');
+            return $this->photos->first();
         });
     }
     #endregion

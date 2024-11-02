@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('parent')->nullable();
             $table->string('title');
             $table->text('description');
             $table->string('status')->default(\App\Http\Classes\Enums\CommentStatus::Pending->name);

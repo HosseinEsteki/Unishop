@@ -32,7 +32,10 @@ Route::get('search', [\App\Http\Controllers\Website\SearchController::class, 'in
 Route::resource('faqs', \App\Http\Controllers\Website\FaqController::class, ['only' => ['index', 'store']]);
 Route::resource('products', \App\Http\Controllers\Website\ProductController::class, ['only' => ['index', 'show']]);
 Route::resource('categories', \App\Http\Controllers\Website\CategoryController::class, ['only' => ['index', 'show']]);
+Route::get('tags/{tag}', [\App\Http\Controllers\Website\TagController::class, 'show'])->name('tags.tag');
 Route::resource('cart', \App\Http\Controllers\Website\CartController::class, ['only' => ['index', 'store', 'destroy']]);
+
+Route::resource('comments', \App\Http\Controllers\Website\CommentController::class, ['only' => ['destroy', 'store']]);
 
 Route::get('transportation', [\App\Http\Controllers\Website\TransportationController::class, 'index'])->name('transportation');
 Route::resource('subscribe', \App\Http\Controllers\Website\SubscribeController::class,)->only(['index', 'store']);

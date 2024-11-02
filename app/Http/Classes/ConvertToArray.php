@@ -15,6 +15,11 @@ class ConvertToArray
     {
         return self::ConvertBase($menus);
     }
+
+    public static function commentsToArray(Collection $comments): ?array
+    {
+        return self::ConvertBase($comments);
+    }
     private static function ConvertBase(Collection $collection, int $parent = null): ?array
     {
         $items = $collection->where('parent', '=', $parent);

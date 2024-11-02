@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Http\Classes\Enums\PhotoPath;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,8 @@ class PhotoFactory extends Factory
     public function definition(): array
     {
         return [
-            'alt' => $this->faker->words(random_int(1, 3), true)
+            'alt' => $this->faker->words(random_int(1, 3), true),
+            'model' => PhotoPath::Product->name
         ];
     }
 }

@@ -10,9 +10,9 @@ class SiteAppSeeder extends Seeder
 {
     public function run(): void
     {
-        $photoGoogleStore = Photo::create();
-        $photoAppleStore = Photo::create();
-        $photoWindowsStore = Photo::create();
+        $photoGoogleStore = Photo::create(['model' => 'Theme']);
+        $photoAppleStore = Photo::create(['model' => 'Theme']);
+        $photoWindowsStore = Photo::create(['model' => 'Theme']);
         $markets = [
             [
                 'name' => 'گوگل پلی',

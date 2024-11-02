@@ -15,7 +15,7 @@ return new class extends Migration {
         Schema::create('top_bars', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->enum('type', EnumConvert::NamesToArray(TopBarType::cases()));
+            $table->enum('type', EnumConvert::NamesToCollection(TopBarType::cases())->all());
             $table->string('content');
             $table->unsignedSmallInteger('priority')->default(0);
             $table->string('link')->nullable();
