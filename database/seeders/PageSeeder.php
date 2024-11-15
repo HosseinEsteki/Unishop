@@ -23,6 +23,14 @@ class PageSeeder extends Seeder
                 'name' => 'تماس با ما',
                 'route' => 'contact-us',
                 'parent' => null
+            ], [
+                'name' => 'محصولات',
+                'route' => 'products.index',
+                'parent' => '3'
+            ], [
+                'name' => 'نمایش محصول',
+                'route' => 'products.show',
+                'parent' => 6
             ]
         ];
 
