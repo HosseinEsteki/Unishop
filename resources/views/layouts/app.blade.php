@@ -11,16 +11,16 @@
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Favicon and Apple Icons-->
-    <link rel="stylesheet" href="/unishop-theme/css/app.css">
+    <link rel="stylesheet" href={{url('unishop-theme/css/app.css')}}>
     <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
-    <link rel="stylesheet" media="screen" href="/unishop-theme/css/vendor.min.css">
+    <link rel="stylesheet" media="screen" href={{url('unishop-theme/css/vendor.min.css')}}>
     <!-- Main Template Styles-->
-    <link id="mainStyles" rel="stylesheet" media="screen" href="/unishop-theme/css/styles.css">
-    <link id="mainStyles" rel="stylesheet" media="screen" href="/unishop-theme/css/rtl.css">
-    <link rel="stylesheet" href="/unishop-theme/css/fancy-slider/style.css">
+    <link id="mainStyles" rel="stylesheet" media="screen" href={{url('unishop-theme/css/styles.css')}}>
+    <link id="mainStyles" rel="stylesheet" media="screen" href="{{url('unishop-theme/css/rtl.css')}}">
+    <link rel="stylesheet" href="{{url('unishop-theme/css/fancy-slider/style.css')}}">
     @yield('links')
     <!-- Modernizr-->
-    <script src="/unishop-theme/js/modernizr.min.js"></script>
+    <script src={{url('unishop-theme/js/modernizr.min.js')}}></script>
 </head>
 <!-- Body-->
 <body>
