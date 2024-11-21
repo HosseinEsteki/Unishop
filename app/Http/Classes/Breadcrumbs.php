@@ -11,7 +11,7 @@ class Breadcrumbs
     {
         $pages = Page::all();
         $page = $page->toArray();
-        return self::makeBreadcrumbs(self::makeTree($pages, $page));
+        return array_reverse(self::makeBreadcrumbs(self::makeTree($pages, $page)));
     }
 
     private static function makeBreadcrumbs(array $collection, $items = [])
