@@ -29,6 +29,11 @@ class CategorySeeder extends Seeder
                 'name' => 'قابلمه و ماهیتابه',
                 'slug' => 'pot',
                 'photo_id' => DefaultPhoto::Category
+            ], [
+                'name' => 'همه محصولات',
+                'slug' => 'all',
+                'photo_id' => DefaultPhoto::Category,
+                'priority' => 0
             ]
         ];
         for ($i = 0; $i < count($mainCategories); $i++) {

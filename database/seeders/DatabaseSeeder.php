@@ -23,8 +23,9 @@ class DatabaseSeeder extends Seeder
         $this->TruncateDatabase();
         $this->call([
             PhotoSeeder::class,
-            ProductSeeder::class,
+            TagSeeder::class,
             CategorySeeder::class,
+            ProductSeeder::class,
             SocialMediaSeeder::class,
             TopBarSeeder::class,
             SettingSeeder::class,
