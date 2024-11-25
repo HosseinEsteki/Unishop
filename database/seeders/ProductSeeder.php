@@ -12,7 +12,9 @@ use App\Models\Order;
 use App\Models\OrderProduct;
 use App\Models\Photo;
 use App\Models\Product;
+use App\Models\Property;
 use App\Models\Rate;
+use App\Models\Sell;
 use App\Models\Tag;
 use App\Models\Ticket;
 use App\Models\TicketMessage;
@@ -21,18 +23,21 @@ use App\Models\UserAddress;
 use App\Models\View;
 use App\Models\WishList;
 use Illuminate\Database\Seeder;
+use Random\RandomException;
 
 class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * @throws RandomException
      */
     public function run(): void
     {
-        $tags = Tag::factory(30)->create();
+        $tags = Tag::all();
         $products = Product::factory(10)->
         hasAttached($tags->random(5))->
         hasAttached(Photo::factory(2))->
+        has(Sell::factory(random_int(0, 50)))->
         create();
 
         User::factory(10)->

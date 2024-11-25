@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -52,9 +53,10 @@ class Product extends Model
     {
         return $this->hasMany(View::class);
     }
-    public function categories(): BelongsToMany
+
+    public function category(): BelongsTo
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
     public function tags(): BelongsToMany
     {
@@ -76,9 +78,19 @@ class Product extends Model
         return $this->belongsToMany(Discount::class);
     }
 
+    public function sells(): HasMany
+    {
+        return $this->hasMany(Sell::class);
+    }
+
     public function comments(): HasMany
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function properties(): BelongsToMany
+    {
+        return $this->belongsToMany(Property::class);
     }
     #endregion
 }

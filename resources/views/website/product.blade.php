@@ -54,12 +54,8 @@
                 </div>
                 <div class="padding-bottom-1x mb-2">
                     <span class="text-medium">دسته‌بندی‌ها :&nbsp;</span>
-                    @foreach($product->categories as $category)
                         <a class="navi-link"
-                           href="{{route('categories.show',$category->slug)}}">{{$category->name}}</a>@if(!$loop->last)
-                            ,
-                        @endif
-                    @endforeach
+                           href="{{route('categories.show',$product->category->slug)}}">{{$product->category->name}}</a>
                 </div>
                 <hr class="mb-3">
                 <div class="d-flex flex-wrap justify-content-between">
