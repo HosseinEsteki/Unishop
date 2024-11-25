@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('name');
             $table->string('slug');
             $table->foreignId('photo_id')->constrained()->noActionOnDelete();
+            $table->tinyInteger('priority')->default(1);
             $table->timestamps();
         });
     }
