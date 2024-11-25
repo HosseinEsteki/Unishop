@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
@@ -13,9 +14,8 @@ class RelatedProducts extends Component
 
     public function __construct(Product $product)
     {
-        //TODO: باید این رو بهینه تر کنیم
-        $category = $product->categories[0];
-        $this->products = $category->products->whereNotIn('id', $product->id);
+
+        $this->products = $product->category->products()->whereNot('id', $product->id)->get();
     }
 
     public function render(): View
