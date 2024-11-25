@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
+use App\Models\WishList;
 use Illuminate\Http\Request;
 
 class WishListController extends Controller
@@ -12,7 +14,7 @@ class WishListController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -20,22 +22,23 @@ class WishListController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        if (!auth()->check()) {
+            return redirect(route('login'));
+        }
+        WishList::create([
+            'product_id' => $request->product_id,
+            'user_id' => \Auth::user()->id
+        ]);
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        //
+        $wishList = WishList::find($id);
+        $wishList->delete();
+        return redirect()->back();
     }
 }
