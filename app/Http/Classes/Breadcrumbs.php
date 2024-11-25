@@ -2,7 +2,9 @@
 
 namespace App\Http\Classes;
 
+use App\Models\Category;
 use App\Models\Page;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Collection;
 
 class Breadcrumbs
@@ -12,6 +14,21 @@ class Breadcrumbs
         $pages = Page::all();
         $page = $page->toArray();
         return array_reverse(self::makeBreadcrumbs(self::makeTree($pages, $page)));
+    }
+
+    public static function ProductBreadCrumbs(Product $product): ?array
+    {
+        return array_reverse(self::CategoryBreadCrumbs($product->category));
+    }
+
+    private static function CategoryBreadCrumbs(Category $category, ?array $array = []): ?array
+    {
+        $array[] = $category;
+        if ($category->parent == null) {
+            return $array;
+        } else {
+            return self::CategoryBreadCrumbs(Category::find($category->parent), $array);
+        }
     }
 
     private static function makeBreadcrumbs(array $collection, $items = [])
