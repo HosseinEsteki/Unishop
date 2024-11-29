@@ -1,7 +1,7 @@
 <section class=" pr-2 pl-2 pt-2 pb-2 rounded-5 soft-shadow mb-2" style="background:#fff">
     <h6 class="text-right border-title mb-3">محصولات مرتبط</h6>
     <div class="owl-carousel"
-         data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;margin&quot;: 10, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;576&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;991&quot;:{&quot;items&quot;:4},&quot;1200&quot;:{&quot;items&quot;:4}},&quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 4000 ,&quot;loop&quot;: true }">
+         data-owl-carousel='{ "nav": true, "rtl":true, "dots": true, "margin": 10, "responsive": {"0":{"items":1},"576":{"items":2},"768":{"items":3},"991":{"items":4},"1200":{"items":4}},"autoplay": true, "autoplayTimeout": 4000 ,"loop": false }'>
         @foreach($products as $product)
             <div class="grid-item">
                 <div class="product-card">
