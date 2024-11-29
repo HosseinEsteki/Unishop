@@ -14,10 +14,10 @@ class ProductsProcess
 {
     /**
      * @param string|null $accordingTo
-     * @param Product $products
+     * @param Builder $products
      * @return Product|Builder|\Illuminate\Database\Query\Builder
      */
-    public function Sort(?string $accordingTo, Product $products): Builder|Product|\Illuminate\Database\Query\Builder
+    public function Sort(?string $accordingTo, Builder $products): Builder|Product|\Illuminate\Database\Query\Builder
     {
         $productIds = $products->pluck('id');
         switch ($accordingTo) {
