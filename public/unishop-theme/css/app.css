@@ -3,3 +3,10 @@
 /*    bottom: 0;*/
 /*    width: 100%;*/
 /*}*/
+#properties th, #properties td {
+    border-top: none !important;
+}
+
+#properties td {
+    border-bottom: 1px solid #e9ecef;
+}

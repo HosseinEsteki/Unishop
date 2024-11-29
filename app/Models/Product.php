@@ -90,7 +90,7 @@ class Product extends Model
 
     public function properties(): BelongsToMany
     {
-        return $this->belongsToMany(Property::class);
+        return $this->belongsToMany(Property::class)->withPivot('descriptions')->withTimestamps();
     }
     #endregion
 }

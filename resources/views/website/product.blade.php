@@ -85,6 +85,8 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab">
                             توضیحات </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#properties" data-toggle="tab" role="tab">
+                            مشخصات </a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab">نظر
                             مخاطبان</a>
                     </li>
@@ -93,6 +95,24 @@
                     <div class="tab-pane fade show active" id="description" role="tabpanel">
                         {!! $product->description !!}
                     </div>
+                    <div class="tab-pane fade" id="properties" role="tabpanel">
+                        <div class="row text-right">
+                            <div class="col-2 font-carbon"><h4>مشخصات</h4></div>
+                            <div class="col-10">
+                                <table class="table properties text-right">
+                                    @foreach($product->properties as $property)
+                                        <tr>
+                                            <th>{{$property->name}}</th>
+                                            <td>{{$property->pivot->descriptions}}</td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <div class="tab-pane fade" id="reviews" role="tabpanel">
                         <!-- Review-->
                         <x-comments :comments="$product->comments()->with('User')->get()"/>

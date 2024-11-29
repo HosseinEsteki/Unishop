@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             TagSeeder::class,
             CategorySeeder::class,
             ProductSeeder::class,
+            PropertySeeder::class,
             SocialMediaSeeder::class,
             TopBarSeeder::class,
             SettingSeeder::class,
